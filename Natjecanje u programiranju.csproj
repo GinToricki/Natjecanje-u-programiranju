@@ -57,9 +57,9 @@
     <None Include="timovi.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="natjecatelji.json">
+    <Content Include="natjecatelji.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
     <None Include="organizatori.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
