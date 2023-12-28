@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1435c520-01cb-485c-866a-105b12574388",
+    "imeKorisnika": "Tin",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "b61a229c-c0da-45f2-b3e8-3d88ba91d7cc",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  }
+]
