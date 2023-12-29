@@ -36,12 +36,12 @@ namespace Natjecanje_u_programiranju
             razinaPravaKorisnika = razinaPravaKorisnikaKon;
         } 
     }
-    public struct KontantInformacije
+    public struct KontanktInformacije
     {
         public string brojMobitela;
         public string email;
 
-        public KontantInformacije(string bMobitela, string emailKon)
+        public KontanktInformacije(string bMobitela, string emailKon)
         {
             brojMobitela = bMobitela;
             email = emailKon;
@@ -66,9 +66,9 @@ namespace Natjecanje_u_programiranju
         public Guid id;
         public string imeOrganizatora;
         public string titulaOrganizatora;
-        public KontantInformacije kInformacije;
+        public KontanktInformacije kInformacije;
 
-        public Organizator(Guid noviId, string imeOrg, string titulaOrg, KontantInformacije kInformacijeKon)
+        public Organizator(Guid noviId, string imeOrg, string titulaOrg, KontanktInformacije kInformacijeKon)
         {
             id = noviId;
             imeOrganizatora = imeOrg;
@@ -107,10 +107,10 @@ namespace Natjecanje_u_programiranju
         public Natjecatelj kapetanTima;
         public List<Natjecatelj> lClanoviTima;
         public List<ProgramskiJezik> programskiJezikTima;
-        public KontantInformacije kontaktTima;
+        public KontanktInformacije kontaktTima;
         public string institucija;
 
-        public Tim(Guid noviId, string imeTimaKon, Natjecatelj kapetanTimaKon, List<Natjecatelj> lClanoviTimaKon, List<ProgramskiJezik> programskiJezikTimaKon, KontantInformacije kontaktTimaKon, string institucijaKon)
+        public Tim(Guid noviId, string imeTimaKon, Natjecatelj kapetanTimaKon, List<Natjecatelj> lClanoviTimaKon, List<ProgramskiJezik> programskiJezikTimaKon, KontanktInformacije kontaktTimaKon, string institucijaKon)
         {
             id = noviId;
             imeTima = imeTimaKon;
@@ -123,6 +123,40 @@ namespace Natjecanje_u_programiranju
     }
     class Program
     {
+        static string dohvatiDatoteku(string imeDatoteke)
+        {
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, imeDatoteke);
+            string json = "";
+            try
+            {
+                using (StreamReader sr = new StreamReader(path))
+                {
+                    json = sr.ReadToEnd();
+
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error pri pisanje u datoteku {0}", imeDatoteke);
+            }
+            return json;
+        }
+        static void ZapisiDatoteku(string imeDatoteke, string noviJson)
+        {
+            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, imeDatoteke);
+            try
+            {
+
+                using (StreamWriter sw = new StreamWriter(path))
+                {
+                    sw.Write(noviJson);
+                }
+            }
+            catch
+            {
+                Console.WriteLine("Error pri pisanje u datoteku {0}", imeDatoteke);
+            }
+        }
         static Korisnik Login()
         {
             Console.WriteLine("Unesite korisnicko ime");
@@ -130,14 +164,7 @@ namespace Natjecanje_u_programiranju
             Console.WriteLine("Unesite lozinku");
             string lozinka = Console.ReadLine();
 
-            List <Korisnik> lKorisnici= new List<Korisnik>();
-
-            using (StreamReader sr = new StreamReader(@"C:\Users\exibo\source\repos\Natjecanje u programiranju\korisnici.json"))
-            {
-                string json = sr.ReadToEnd();
-
-                lKorisnici = JsonConvert.DeserializeObject<List<Korisnik>>(json);
-            }
+            List <Korisnik> lKorisnici= lKorisnici = JsonConvert.DeserializeObject<List<Korisnik>>(dohvatiDatoteku("korisnici.json"));
 
             while (true)
             {
@@ -161,11 +188,61 @@ namespace Natjecanje_u_programiranju
 
             
         }
+        
+        static void kreirajTimove()
+        {
+            string nazivDatoteke = "timovi.json";
 
+            List<Natjecatelj> lNatjecatelja = JsonConvert.DeserializeObject<List<Natjecatelj>>(dohvatiDatoteku("natjecatelji.json"));
+            List<ProgramskiJezik> lProgramskihJezika = JsonConvert.DeserializeObject<List<ProgramskiJezik>>(dohvatiDatoteku("programski_jezici.json"));
+
+            Tim tim01 = new Tim(Guid.NewGuid(), "A-tim", lNatjecatelja[0], new List<Natjecatelj> { lNatjecatelja[0], lNatjecatelja[1], lNatjecatelja[2] }, new List<ProgramskiJezik> { lProgramskihJezika[0] }, new KontanktInformacije("123-456-7777", "a-tim@mail.com"), "VŠMTI");
+            Tim tim02 = new Tim(Guid.NewGuid(), "B-tim", lNatjecatelja[3], new List<Natjecatelj> { lNatjecatelja[3], lNatjecatelja[4], lNatjecatelja[5] }, new List<ProgramskiJezik> { lProgramskihJezika[0], lProgramskihJezika[2], lProgramskihJezika[3] }, new KontanktInformacije("222-456-7777", "b-tim@mail.com"), "FER");
+            Tim tim03 = new Tim(Guid.NewGuid(), "C-tim", lNatjecatelja[6], new List<Natjecatelj> { lNatjecatelja[6], lNatjecatelja[7], lNatjecatelja[8] }, new List<ProgramskiJezik> { lProgramskihJezika[4], lProgramskihJezika[2] }, new KontanktInformacije("555-456-7777", "c-tim@mail.com"), "TVZ");
+            Tim tim04 = new Tim(Guid.NewGuid(), "D-tim", lNatjecatelja[9], new List<Natjecatelj> { lNatjecatelja[9], lNatjecatelja[10], lNatjecatelja[11] }, new List<ProgramskiJezik> { lProgramskihJezika[0], lProgramskihJezika[1], lProgramskihJezika[2], lProgramskihJezika[3], lProgramskihJezika[4] }, new KontanktInformacije("123-654-7777", "d-tim@mail.com"), "VŠMTI");
+            Tim tim05 = new Tim(Guid.NewGuid(), "E-tim", lNatjecatelja[12], new List<Natjecatelj> { lNatjecatelja[12], lNatjecatelja[13], lNatjecatelja[14] }, new List<ProgramskiJezik> { lProgramskihJezika[0], lProgramskihJezika[4] }, new KontanktInformacije("333-456-7777", "e-tim@mail.com"), "FOI");
+
+            List<Tim> lTimova = new List<Tim> { tim01, tim02, tim03, tim04, tim05 };
+            string noviJson = JsonConvert.SerializeObject(lTimova);
+
+            ZapisiDatoteku(nazivDatoteke, noviJson);
+        }
+        static void kreirajOrganizatore()
+        {
+            string nazivDatoteke = "organizatori.json";
+
+            Organizator organizator01 = new Organizator(Guid.NewGuid(), "Josip", "Mag.", new KontanktInformacije("09912345678", "josip@mail.com"));
+            Organizator organizator02 = new Organizator(Guid.NewGuid(), "Marko", "Mag.", new KontanktInformacije("09912345678", "marko@mail.com"));
+            Organizator organizator03 = new Organizator(Guid.NewGuid(), "Petar", "Mag.", new KontanktInformacije("09912345678", "petar@mail.com"));
+            Organizator organizator04 = new Organizator(Guid.NewGuid(), "Dario", "Mag.", new KontanktInformacije("09912345678", "dario@mail.com"));
+            Organizator organizator05 = new Organizator(Guid.NewGuid(), "Luka", "Mag.", new KontanktInformacije("09912345678", "luka@mail.com"));
+
+            List<Organizator> lOrganizatora = new List<Organizator> { organizator01, organizator02, organizator03, organizator04, organizator05 };
+            string noviJson = JsonConvert.SerializeObject(lOrganizatora);
+            ZapisiDatoteku(nazivDatoteke, noviJson);
+        }
+
+        static void kreirajProgramskeJezike()
+        {
+            string nazivDatoteke = "programski_jezici.json";
+
+            List<Organizator> lOrganizatora = JsonConvert.DeserializeObject<List<Organizator>>(dohvatiDatoteku("organizatori.json"));
+
+            ProgramskiJezik python = new ProgramskiJezik(Guid.NewGuid(), "python", lOrganizatora[0]);
+            ProgramskiJezik csharp = new ProgramskiJezik(Guid.NewGuid(), "csharp", lOrganizatora[1]);
+            ProgramskiJezik c = new ProgramskiJezik(Guid.NewGuid(), "c", lOrganizatora[2]);
+            ProgramskiJezik cplusplus = new ProgramskiJezik(Guid.NewGuid(), "cplusplus", lOrganizatora[3]);
+            ProgramskiJezik javascript = new ProgramskiJezik(Guid.NewGuid(), "python", lOrganizatora[4]);
+
+            List<ProgramskiJezik> lProgramskihJezika = new List<ProgramskiJezik> { python, csharp, c, cplusplus, javascript };
+
+            string noviJson = JsonConvert.SerializeObject(lProgramskihJezika);
+
+            ZapisiDatoteku(nazivDatoteke, noviJson);
+        }
         static void kreirajNatjecatelje()
         {
             string nazivDatoteke = "natjecatelji.json";
-            string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, nazivDatoteke);
 
             Natjecatelj natjecatelj01 = new Natjecatelj(Guid.NewGuid(), "Marko");
             Natjecatelj natjecatelj02 = new Natjecatelj(Guid.NewGuid(), "Dominik");
@@ -184,22 +261,8 @@ namespace Natjecanje_u_programiranju
             Natjecatelj natjecatelj15 = new Natjecatelj(Guid.NewGuid(), "Iva");
 
             List<Natjecatelj> lNatljecatelja = new List<Natjecatelj> { natjecatelj01, natjecatelj02, natjecatelj03, natjecatelj04, natjecatelj05, natjecatelj06, natjecatelj07, natjecatelj08, natjecatelj09, natjecatelj10, natjecatelj11, natjecatelj12, natjecatelj13, natjecatelj14, natjecatelj15 };
-
             string noviJson = JsonConvert.SerializeObject(lNatljecatelja);
-
-            try
-            {
-                using (StreamWriter sw = new StreamWriter(path))
-                {
-                    sw.Write(noviJson);
-                }
-                Console.WriteLine(path);
-            }
-            catch
-            {
-                Console.WriteLine("Error pri pisanje u datoteku natjecatelji.json");
-            }
-           
+            ZapisiDatoteku(nazivDatoteke, noviJson);
         }
         static void Main(string[] args)
         {
@@ -217,7 +280,10 @@ namespace Natjecanje_u_programiranju
             {
                 sw.Write(noviJson);
             }
-            kreirajNatjecatelje();
+            //kreirajProgramskeJezike();
+            //kreirajOrganizatore();
+            //kreirajNatjecatelje();
+            //kreirajTimove();
             Izbornik();
             Console.ReadKey();
         }

@@ -1,3 +1,67 @@
-{
-
-}
+[
+  {
+    "id": "59f1a617-06c6-4980-9d3d-2b1376348725",
+    "imeProgramskogJezika": "python",
+    "organizatorJezika": {
+      "id": "8a25a072-3254-4d5a-b9c7-b3fee74b657c",
+      "imeOrganizatora": "Josip",
+      "titulaOrganizatora": "Mag.",
+      "kInformacije": {
+        "brojMobitela": "09912345678",
+        "email": "josip@mail.com"
+      }
+    }
+  },
+  {
+    "id": "15cf753e-3296-4754-b1f1-23a742890883",
+    "imeProgramskogJezika": "csharp",
+    "organizatorJezika": {
+      "id": "ee75af5b-ba45-482d-86c5-c418fdda1356",
+      "imeOrganizatora": "Marko",
+      "titulaOrganizatora": "Mag.",
+      "kInformacije": {
+        "brojMobitela": "09912345678",
+        "email": "marko@mail.com"
+      }
+    }
+  },
+  {
+    "id": "b04c3086-3b0a-40e2-84a9-5c20a9e4b068",
+    "imeProgramskogJezika": "c",
+    "organizatorJezika": {
+      "id": "92666c51-430e-480a-b8cf-dfd96021c56a",
+      "imeOrganizatora": "Petar",
+      "titulaOrganizatora": "Mag.",
+      "kInformacije": {
+        "brojMobitela": "09912345678",
+        "email": "petar@mail.com"
+      }
+    }
+  },
+  {
+    "id": "4de84a16-a281-40ed-9679-3a64cc8e622f",
+    "imeProgramskogJezika": "cplusplus",
+    "organizatorJezika": {
+      "id": "d652ced1-db3f-4540-a414-d04ec7cf6f60",
+      "imeOrganizatora": "Dario",
+      "titulaOrganizatora": "Mag.",
+      "kInformacije": {
+        "brojMobitela": "09912345678",
+        "email": "dario@mail.com"
+      }
+    }
+  },
+  {
+    "id": "f60ab58c-3d02-4376-9e13-4c1b5dddde02",
+    "imeProgramskogJezika": "python",
+    "organizatorJezika": {
+      "id": "60d365a3-685d-4a4d-b7a8-0014d5d7ce89",
+      "imeOrganizatora": "Luka",
+      "titulaOrganizatora": "Mag.",
+      "kInformacije": {
+        "brojMobitela": "09912345678",
+        "email": "luka@mail.com"
+      }
+    }
+  }
+]
