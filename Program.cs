@@ -18,6 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
+using ConsoleTables;
 
 namespace Natjecanje_u_programiranju
 {
@@ -182,10 +183,38 @@ namespace Natjecanje_u_programiranju
                 lozinka = Console.ReadLine();
             }
         }
+        static void prikaziTimove()
+        {
+            int rBr = 1;
+            var table = new ConsoleTable("R.br.", "ID", "Naziv Tima", "Clanovi Tima", "Kapetan tima", "Kontakt", "Programski jezici", "Institucija");
+
+            List<Tim> lTimova = JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json"));
+
+            foreach(Tim tim in lTimova)
+            {
+                string clanoviTima = "";
+                foreach(Natjecatelj clanTima in tim.lClanoviTima)
+                {
+                    clanoviTima += clanTima.imeNatjecatelja + ",";
+                }
+                string kontantTima = "Mobitel: " + tim.kontaktTima.brojMobitela + ",Email: " +tim.kontaktTima.email;
+                string programskiJeziciTima = "";
+                foreach(ProgramskiJezik programskiJezik in tim.programskiJezikTima)
+                {
+                    programskiJeziciTima += programskiJezik.imeProgramskogJezika + ",";
+                }
+                table.AddRow(rBr++, tim.id, tim.imeTima, clanoviTima,tim.kapetanTima.imeNatjecatelja, kontantTima, programskiJeziciTima, tim.institucija );
+            }
+            table.Write();
+        }
+        static void prikaziIzbornikAdmin()
+        {
+
+        }
         static void Izbornik()
         {
             Korisnik trenutacniKorisnik = Login();
-
+           
             
         }
         
@@ -232,7 +261,7 @@ namespace Natjecanje_u_programiranju
             ProgramskiJezik csharp = new ProgramskiJezik(Guid.NewGuid(), "csharp", lOrganizatora[1]);
             ProgramskiJezik c = new ProgramskiJezik(Guid.NewGuid(), "c", lOrganizatora[2]);
             ProgramskiJezik cplusplus = new ProgramskiJezik(Guid.NewGuid(), "cplusplus", lOrganizatora[3]);
-            ProgramskiJezik javascript = new ProgramskiJezik(Guid.NewGuid(), "python", lOrganizatora[4]);
+            ProgramskiJezik javascript = new ProgramskiJezik(Guid.NewGuid(), "javascript", lOrganizatora[4]);
 
             List<ProgramskiJezik> lProgramskihJezika = new List<ProgramskiJezik> { python, csharp, c, cplusplus, javascript };
 
@@ -284,7 +313,8 @@ namespace Natjecanje_u_programiranju
             //kreirajOrganizatore();
             //kreirajNatjecatelje();
             //kreirajTimove();
-            Izbornik();
+            prikaziTimove();
+            //Izbornik();
             Console.ReadKey();
         }
     }
