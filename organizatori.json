@@ -1,1 +1,47 @@
-[{"id":"e42d7c5a-eed1-4d0c-8336-f3d6e999be89","imeOrganizatora":"Josip","titulaOrganizatora":"Mag.","kInformacije":{"brojMobitela":"09912345678","email":"josip@mail.com"}},{"id":"2416bd50-4f2d-4811-bcf1-bda0b6eb8222","imeOrganizatora":"Marko","titulaOrganizatora":"Mag.","kInformacije":{"brojMobitela":"09912345678","email":"marko@mail.com"}},{"id":"9b4184e8-499b-4536-b201-b82799b862a7","imeOrganizatora":"Petar","titulaOrganizatora":"Mag.","kInformacije":{"brojMobitela":"09912345678","email":"petar@mail.com"}},{"id":"d57d8be7-c3a4-4911-beb0-b559549fb022","imeOrganizatora":"Dario","titulaOrganizatora":"Mag.","kInformacije":{"brojMobitela":"09912345678","email":"dario@mail.com"}},{"id":"36435d36-5af7-43cb-9505-7b2e9a8fd528","imeOrganizatora":"Luka","titulaOrganizatora":"Mag.","kInformacije":{"brojMobitela":"09912345678","email":"luka@mail.com"}}]
+[
+  {
+    "id": "e42d7c5a-eed1-4d0c-8336-f3d6e999be89",
+    "imeOrganizatora": "Josip",
+    "titulaOrganizatora": "Mag.",
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "josip@mail.com"
+    }
+  },
+  {
+    "id": "2416bd50-4f2d-4811-bcf1-bda0b6eb8222",
+    "imeOrganizatora": "Marko",
+    "titulaOrganizatora": "Mag.",
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "marko@mail.com"
+    }
+  },
+  {
+    "id": "9b4184e8-499b-4536-b201-b82799b862a7",
+    "imeOrganizatora": "Petar",
+    "titulaOrganizatora": "Mag.",
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "petar@mail.com"
+    }
+  },
+  {
+    "id": "d57d8be7-c3a4-4911-beb0-b559549fb022",
+    "imeOrganizatora": "Dario",
+    "titulaOrganizatora": "Mag.",
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "dario@mail.com"
+    }
+  },
+  {
+    "id": "36435d36-5af7-43cb-9505-7b2e9a8fd528",
+    "imeOrganizatora": "Luka",
+    "titulaOrganizatora": "Mag.",
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "luka@mail.com"
+    }
+  }
+]
