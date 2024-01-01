@@ -1,15 +1,15 @@
 [
   {
     "id": "6d580a4c-8c25-4985-81b0-b5d04b87095f",
-    "imeTima": "A-tim",
+    "imeTima": "Super A-tim",
     "kapetanTima": {
       "id": "f1b97c29-0a8f-44d9-a340-8c63aef6e20f",
-      "imeNatjecatelja": "Marko"
+      "imeNatjecatelja": "Roko"
     },
     "lClanoviTima": [
       {
         "id": "f1b97c29-0a8f-44d9-a340-8c63aef6e20f",
-        "imeNatjecatelja": "Marko"
+        "imeNatjecatelja": "Roko"
       },
       {
         "id": "a97c6f09-7f2b-44cb-b0ed-47ef5f19b19d",

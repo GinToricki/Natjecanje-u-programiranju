@@ -263,6 +263,124 @@ namespace Natjecanje_u_programiranju
             ZapisiDatoteku("natjecatelji.json", noviJson);
             return noviNatjecatelj;
         }
+
+        static void DodavanjeOrganizatora()
+        {
+            Console.WriteLine("Unesite Ime Organizatora");
+            string imeOrganizatora = Console.ReadLine();
+            Console.WriteLine("Unesite titulu organizatora");
+            string titulaOrganizatora = Console.ReadLine();
+            List<Organizator> lOrganizatora = JsonConvert.DeserializeObject<List<Organizator>>(dohvatiDatoteku("organizatori.json"));
+            Organizator noviOrganizator = new Organizator(Guid.NewGuid(), imeOrganizatora, titulaOrganizatora, DodavanjeKontakta());
+
+            lOrganizatora.Add(noviOrganizator);
+            string noviJson = JsonConvert.SerializeObject(lOrganizatora);
+            ZapisiDatoteku("organizatori.json", noviJson);
+        }
+
+        static void azurirajNazivTima(List<Tim> ulaznaListaTimova, int ulazniRedniBroj)
+        {
+            Console.WriteLine("Ime tima koje mijenjate {0}", ulaznaListaTimova[ulazniRedniBroj].imeTima);
+            Console.WriteLine("Unesite novo Ime");
+            string novoImeTima = Console.ReadLine();
+            ulaznaListaTimova[ulazniRedniBroj] = new Tim(ulaznaListaTimova[ulazniRedniBroj].id, novoImeTima, ulaznaListaTimova[ulazniRedniBroj].kapetanTima, ulaznaListaTimova[ulazniRedniBroj].lClanoviTima, ulaznaListaTimova[ulazniRedniBroj].programskiJezikTima, ulaznaListaTimova[ulazniRedniBroj].kontaktTima, ulaznaListaTimova[ulazniRedniBroj].institucija);
+
+            string noviJson = JsonConvert.SerializeObject(ulaznaListaTimova);
+            ZapisiDatoteku("timovi.json", noviJson);
+        }
+        static void prikaziClanoveTima(List<Natjecatelj> ulaznaListaNatjecatelja)
+        {
+            for(int i = 0; i < ulaznaListaNatjecatelja.Count; i++)
+            {
+                Console.WriteLine("R.br. Natjecatelja {0}\tIme Natjecatelja {1}", i+1, ulaznaListaNatjecatelja[i].imeNatjecatelja);
+            }
+        }
+        static Natjecatelj promijeniNatjecateljaUDatoteci(Guid id, string novoIme)
+        {
+            List<Natjecatelj> lNatjecatelja = JsonConvert.DeserializeObject<List<Natjecatelj>>(dohvatiDatoteku("natjecatelji.json"));
+            Natjecatelj natjecateljSNovimImenom = new Natjecatelj();
+            for(int i = 0; i < lNatjecatelja.Count; i++)
+            {
+                if(id == lNatjecatelja[i].id)
+                {
+                    lNatjecatelja[i] = new Natjecatelj(id, novoIme);
+                    natjecateljSNovimImenom = lNatjecatelja[i];
+                }
+            }
+            string noviJson = JsonConvert.SerializeObject(lNatjecatelja);
+            ZapisiDatoteku("natjecatelji.json", noviJson);
+            return natjecateljSNovimImenom;
+        }
+        static Natjecatelj promijeniImeClanaTima(List<Natjecatelj> ulaznaListaNatjecatelja)
+        {
+            prikaziClanoveTima(ulaznaListaNatjecatelja);
+            Console.WriteLine("Odaberite clana kojem zelite promijeniti ime");
+            int odabirClana = Convert.ToInt32(Console.ReadLine()) -1;
+            Console.WriteLine("Unesite novo ime za {0}", ulaznaListaNatjecatelja[odabirClana].imeNatjecatelja);
+            string novoIme = Console.ReadLine();
+            Natjecatelj updateanNatjecatelj = promijeniNatjecateljaUDatoteci(ulaznaListaNatjecatelja[odabirClana].id, novoIme);
+            ulaznaListaNatjecatelja[odabirClana] = updateanNatjecatelj;
+            return updateanNatjecatelj;
+        }
+        static void updateTimove(List<Tim> ulaznaListaTimova)
+        {
+            string noviJson = JsonConvert.SerializeObject(ulaznaListaTimova);
+            ZapisiDatoteku("timovi.json", noviJson);
+        }
+        static void azurirajClanoveTima(List<Tim> ulaznaListaTimova, int ulazniRedniBroj)
+        {
+            Console.WriteLine("1. Promijeni ime Clana Tima\n2. Dodaj Clana Tima\n3. Izbaci Clana Tima");
+            int odabir = Convert.ToInt32(Console.ReadLine());
+                switch(odabir)
+                {
+                    case 1:
+                    Natjecatelj updateanNatjecatelj = promijeniImeClanaTima(ulaznaListaTimova[ulazniRedniBroj].lClanoviTima);
+                    if (updateanNatjecatelj.id == ulaznaListaTimova[ulazniRedniBroj].kapetanTima.id)
+                    {
+                        ulaznaListaTimova[ulazniRedniBroj] = new Tim(ulaznaListaTimova[ulazniRedniBroj].id, ulaznaListaTimova[ulazniRedniBroj].imeTima, updateanNatjecatelj, ulaznaListaTimova[ulazniRedniBroj].lClanoviTima, ulaznaListaTimova[ulazniRedniBroj].programskiJezikTima, ulaznaListaTimova[ulazniRedniBroj].kontaktTima, ulaznaListaTimova[ulazniRedniBroj].institucija);
+                    }
+                    updateTimove(ulaznaListaTimova);
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        Console.WriteLine("Error pri odabiru kod azuriranja clanova tima");
+                        break;
+                }
+        }
+        static void azurirajTimove()
+        {
+            prikaziTimove();
+            Console.WriteLine("Odaberite redni broj tima kojeg želite ažurirati");
+            int redniBroj = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine("Koju informaciju želite ažurirati za tim {0}.", redniBroj + 1);
+            Console.WriteLine("1. Naziv Tima\n2.Clanove tima\n3.Kapetana tima\n4. Kontakt\n5. Programske jezike\n6.Instituciju");
+            int odabir = Convert.ToInt32(Console.ReadLine());
+            List<Tim> lTimova = JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json"));
+
+            switch(odabir)
+            {
+                case 1:
+                    azurirajNazivTima(lTimova, redniBroj);
+                    break;
+                case 2:
+                    azurirajClanoveTima(lTimova, redniBroj);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+                default:
+                    Console.WriteLine("Error pri switch");
+                    break;
+            }
+        }
         
         static void dodavanjeTima()
         {
@@ -440,14 +558,16 @@ namespace Natjecanje_u_programiranju
              {
                  sw.Write(noviJson);
              }*/
+            //Redoslijed kreiranja:  1. Organizator, 2. Programski jezik, 3. Natjecatelji, 4. Timovi
             //kreirajProgramskeJezike();
             //kreirajOrganizatore();
             //kreirajNatjecatelje();
             //kreirajTimove();
             //prikaziTimove();
             //prikaziOrganizatore();
-            dodavanjeTima();
+            //dodavanjeTima();
             //Izbornik();
+            azurirajTimove();
             Console.ReadKey();
         }
     }
