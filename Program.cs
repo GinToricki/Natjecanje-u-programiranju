@@ -327,28 +327,164 @@ namespace Natjecanje_u_programiranju
             string noviJson = JsonConvert.SerializeObject(ulaznaListaTimova);
             ZapisiDatoteku("timovi.json", noviJson);
         }
+        static void dodajClanaTima(List<Tim> ulaznaListaTimova, int ulazniRedniBroj)
+        {
+            Natjecatelj noviClanTima = DodavanjeNatjecatelja();
+            ulaznaListaTimova[ulazniRedniBroj].lClanoviTima.Add(noviClanTima);
+            updateTimove(ulaznaListaTimova);
+        }
+        static void izbrisiTim(List<Tim> ulaznaListaTimova, int ulazniRedniBroj, bool odabir = false)
+        {
+            if(odabir)
+            {
+
+            }else
+            {
+                Console.WriteLine("Brisemo tim {0}", ulaznaListaTimova[ulazniRedniBroj].imeTima);
+                ulaznaListaTimova.RemoveAt(ulazniRedniBroj);
+            }
+            updateTimove(ulaznaListaTimova);
+        }
+        static Tim azurirajKapetanaTima(Tim ulazniTim, int odabir = -1)
+        {
+            Tim reTim = new Tim();
+            if (odabir != -1)
+            {
+                Console.WriteLine("Odaberite novog kapetana tima");
+                for (int i = 0; i < ulazniTim.lClanoviTima.Count; i++)
+                {
+                    int redniBroj = 1 + i;
+                    if (odabir != i)
+                    {
+                        Console.WriteLine("{0}. Ime Clana Tima: {1}", redniBroj, ulazniTim.lClanoviTima[i].imeNatjecatelja);
+                    }
+                }
+                int odabirNovogKapetana = Convert.ToInt32(Console.ReadLine()) - 1;
+                reTim = new Tim(ulazniTim.id, ulazniTim.imeTima, ulazniTim.lClanoviTima[odabirNovogKapetana], ulazniTim.lClanoviTima, ulazniTim.programskiJezikTima, ulazniTim.kontaktTima, ulazniTim.institucija);
+            }
+            else
+            {
+                for (int i = 0; i < ulazniTim.lClanoviTima.Count; i++)
+                {
+                    int redniBroj = 1 + i;
+                    if (!ulazniTim.kapetanTima.Equals(ulazniTim.lClanoviTima[i]))
+                    {
+                        Console.WriteLine("{0}. Ime Clana Tima: {1}", redniBroj, ulazniTim.lClanoviTima[i].imeNatjecatelja);
+                    }
+                }
+                int odabirNovogKapetana = Convert.ToInt32(Console.ReadLine()) - 1;
+                reTim = new Tim(ulazniTim.id, ulazniTim.imeTima, ulazniTim.lClanoviTima[odabirNovogKapetana], ulazniTim.lClanoviTima, ulazniTim.programskiJezikTima, ulazniTim.kontaktTima, ulazniTim.institucija);
+            }
+            return reTim;
+        }
+        static void izbrisiClanaTima(List<Tim> ulaznaListaTimova, int ulazniRedniBroj)
+        {
+            prikaziClanoveTima(ulaznaListaTimova[ulazniRedniBroj].lClanoviTima);
+            Console.WriteLine("Odaberite kojeg clana zelite izbrisati");
+            int odabir = Convert.ToInt32(Console.ReadLine()) - 1;
+            if(ulaznaListaTimova[ulazniRedniBroj].lClanoviTima.Count <= 3)
+            {
+                izbrisiTim(ulaznaListaTimova, ulazniRedniBroj);
+            }
+            else
+            {
+                if(ulaznaListaTimova[ulazniRedniBroj].lClanoviTima[odabir].Equals(ulaznaListaTimova[ulazniRedniBroj].kapetanTima))
+                {
+                    ulaznaListaTimova[ulazniRedniBroj] = azurirajKapetanaTima(ulaznaListaTimova[ulazniRedniBroj], odabir);
+                }
+                ulaznaListaTimova[ulazniRedniBroj].lClanoviTima.RemoveAt(odabir);
+            }
+            updateTimove(ulaznaListaTimova);
+        }
         static void azurirajClanoveTima(List<Tim> ulaznaListaTimova, int ulazniRedniBroj)
         {
             Console.WriteLine("1. Promijeni ime Clana Tima\n2. Dodaj Clana Tima\n3. Izbaci Clana Tima");
             int odabir = Convert.ToInt32(Console.ReadLine());
-                switch(odabir)
+            bool validOdabir = true;
+            while (validOdabir)
+            {
+                if(odabir == 2 && ulaznaListaTimova[ulazniRedniBroj].lClanoviTima.Count == 4)
                 {
-                    case 1:
-                    Natjecatelj updateanNatjecatelj = promijeniImeClanaTima(ulaznaListaTimova[ulazniRedniBroj].lClanoviTima);
-                    if (updateanNatjecatelj.id == ulaznaListaTimova[ulazniRedniBroj].kapetanTima.id)
-                    {
-                        ulaznaListaTimova[ulazniRedniBroj] = new Tim(ulaznaListaTimova[ulazniRedniBroj].id, ulaznaListaTimova[ulazniRedniBroj].imeTima, updateanNatjecatelj, ulaznaListaTimova[ulazniRedniBroj].lClanoviTima, ulaznaListaTimova[ulazniRedniBroj].programskiJezikTima, ulaznaListaTimova[ulazniRedniBroj].kontaktTima, ulaznaListaTimova[ulazniRedniBroj].institucija);
-                    }
-                    updateTimove(ulaznaListaTimova);
-                        break;
-                    case 2:
-                        break;
-                    case 3:
-                        break;
-                    default:
-                        Console.WriteLine("Error pri odabiru kod azuriranja clanova tima");
-                        break;
+                    Console.WriteLine("Vec ima 4 clana u timu. Ne mozete dodati vise clanova. Ponovo unesite odabir.");
+                    odabir = Convert.ToInt32(Console.ReadLine());
                 }
+                else if(odabir == 3 && ulaznaListaTimova[ulazniRedniBroj].lClanoviTima.Count == 3)
+                {
+                    Console.WriteLine("Tim ima 3 clana. Ako izbacite clana tim ce se obrisati");
+                    validOdabir = false;
+                }else
+                {
+                    validOdabir = false;
+                }
+            }
+            switch(odabir)
+            {
+                case 1:
+                Natjecatelj updateanNatjecatelj = promijeniImeClanaTima(ulaznaListaTimova[ulazniRedniBroj].lClanoviTima);
+                if (updateanNatjecatelj.id == ulaznaListaTimova[ulazniRedniBroj].kapetanTima.id)
+                {
+                    ulaznaListaTimova[ulazniRedniBroj] = new Tim(ulaznaListaTimova[ulazniRedniBroj].id, ulaznaListaTimova[ulazniRedniBroj].imeTima, updateanNatjecatelj, ulaznaListaTimova[ulazniRedniBroj].lClanoviTima, ulaznaListaTimova[ulazniRedniBroj].programskiJezikTima, ulaznaListaTimova[ulazniRedniBroj].kontaktTima, ulaznaListaTimova[ulazniRedniBroj].institucija);
+                }
+                updateTimove(ulaznaListaTimova);
+                    break;
+                case 2:
+                    dodajClanaTima(ulaznaListaTimova, ulazniRedniBroj);
+                    break;
+                case 3:
+                    izbrisiClanaTima(ulaznaListaTimova, ulazniRedniBroj);
+                    break;
+                default:
+                    Console.WriteLine("Error pri odabiru kod azuriranja clanova tima");
+                    break;
+            }
+        }
+        static void prikaziProgramskeJezikeTima(List<ProgramskiJezik> ulaznaListaProgramskihJezika)
+        { 
+            Console.WriteLine("Programski Jezici tima su:");
+            for(int i = 0; i < ulaznaListaProgramskihJezika.Count; i++)
+            {
+                int redniBroj = i + 1;      
+                Console.WriteLine("R.br. {0}. Ime Programskog jezika tima {1}", redniBroj, ulaznaListaProgramskihJezika[i].imeProgramskogJezika);
+            }
+        }
+        static int izbrisiProgramskiJezikTima(List<ProgramskiJezik> ulaznaListaProgramskihJezika)
+        {
+            int odabir = -1;
+            if(ulaznaListaProgramskihJezika.Count != 0)
+            {
+                prikaziProgramskeJezikeTima(ulaznaListaProgramskihJezika);
+                Console.WriteLine("Unesite redni broj programskog jezika koji zelite izbrisati");
+                odabir = Convert.ToInt32(Console.ReadLine()) - 1;
+            }
+            else
+            {
+                Console.WriteLine("Tim nema prijavljene programske jezike za natjecanje");
+            }
+            return odabir;
+        }
+        static List<ProgramskiJezik> azurirajProgramskeJezike(List<ProgramskiJezik> ulaznaListaProgramskihJezika)
+        {
+            List<ProgramskiJezik> retProgramskiJezici = new List<ProgramskiJezik>(ulaznaListaProgramskihJezika);
+            prikaziProgramskeJezikeTima(ulaznaListaProgramskihJezika);
+            Console.WriteLine("1. Dodaj Programski jezik\n2. Izbrisi Programski jezik");
+            int odabir = Convert.ToInt32(Console.ReadLine());
+            switch(odabir)
+            {
+                case 1:
+                    retProgramskiJezici.Add(prikaziProgramskeJezike());
+                    break;
+                case 2:
+                    int programskiJezikZaIzbrisat = izbrisiProgramskiJezikTima(ulaznaListaProgramskihJezika);
+                    if (programskiJezikZaIzbrisat != -1)
+                    {
+                        retProgramskiJezici.RemoveAt(programskiJezikZaIzbrisat);
+                    }
+                    break;
+                default:
+                    Console.WriteLine("Error pri switch-u u funkciji azurirajProgramskeJezike");
+                    break;
+            }
+            return retProgramskiJezici;
         }
         static void azurirajTimove()
         {
@@ -356,7 +492,7 @@ namespace Natjecanje_u_programiranju
             Console.WriteLine("Odaberite redni broj tima kojeg želite ažurirati");
             int redniBroj = Convert.ToInt32(Console.ReadLine()) - 1;
             Console.WriteLine("Koju informaciju želite ažurirati za tim {0}.", redniBroj + 1);
-            Console.WriteLine("1. Naziv Tima\n2.Clanove tima\n3.Kapetana tima\n4. Kontakt\n5. Programske jezike\n6.Instituciju");
+            Console.WriteLine("1. Naziv Tima\n2. Clanove tima\n3. Kapetana tima\n4. Kontakt\n5. Programske jezike\n6. Instituciju");
             int odabir = Convert.ToInt32(Console.ReadLine());
             List<Tim> lTimova = JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json"));
 
@@ -369,17 +505,22 @@ namespace Natjecanje_u_programiranju
                     azurirajClanoveTima(lTimova, redniBroj);
                     break;
                 case 3:
+                    lTimova[redniBroj] = azurirajKapetanaTima(lTimova[redniBroj]);
                     break;
                 case 4:
+                    lTimova[redniBroj] = new Tim(lTimova[redniBroj].id, lTimova[redniBroj].imeTima, lTimova[redniBroj].kapetanTima, lTimova[redniBroj].lClanoviTima, lTimova[redniBroj].programskiJezikTima, DodavanjeKontakta(), lTimova[redniBroj].institucija);
                     break;
                 case 5:
+                    lTimova[redniBroj] = new Tim(lTimova[redniBroj].id, lTimova[redniBroj].imeTima, lTimova[redniBroj].kapetanTima, lTimova[redniBroj].lClanoviTima, azurirajProgramskeJezike(lTimova[redniBroj].programskiJezikTima), lTimova[redniBroj].kontaktTima, lTimova[redniBroj].institucija);
                     break;
                 case 6:
+                    lTimova[redniBroj] = new Tim(lTimova[redniBroj].id, lTimova[redniBroj].imeTima, lTimova[redniBroj].kapetanTima, lTimova[redniBroj].lClanoviTima, lTimova[redniBroj].programskiJezikTima, lTimova[redniBroj].kontaktTima, DodavanjeInstitucije());
                     break;
                 default:
-                    Console.WriteLine("Error pri switch");
+                    Console.WriteLine("Error pri switch u funkciji azurirajTimove");
                     break;
             }
+            updateTimove(lTimova);
         }
         
         static void dodavanjeTima()
