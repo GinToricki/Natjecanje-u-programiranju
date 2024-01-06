@@ -1,67 +1,77 @@
 [
   {
-    "id": "448e306f-0e0e-4c74-a012-ce707ba76a37",
+    "id": "3636645b-de03-438a-bcd4-c95a4d32ccea",
     "imeProgramskogJezika": "python",
-    "organizatorJezika": {
-      "id": "8a25a072-3254-4d5a-b9c7-b3fee74b657c",
-      "imeOrganizatora": "Josip",
-      "titulaOrganizatora": "Mag.",
-      "kInformacije": {
-        "brojMobitela": "09912345678",
-        "email": "josip@mail.com"
+    "organizatorJezika": [
+      {
+        "id": "ea2a8fd0-92c1-45cc-9801-7af6ca9cc010",
+        "imeOrganizatora": "Josip",
+        "titulaOrganizatora": "Mag.",
+        "kInformacije": {
+          "brojMobitela": "09912345678",
+          "email": "josip@mail.com"
+        }
       }
-    }
+    ]
   },
   {
-    "id": "e5d165aa-31b2-4b61-990f-047396f022cb",
+    "id": "24e76546-ea3e-4450-9b6a-fa977bb5b861",
     "imeProgramskogJezika": "csharp",
-    "organizatorJezika": {
-      "id": "ee75af5b-ba45-482d-86c5-c418fdda1356",
-      "imeOrganizatora": "Marko",
-      "titulaOrganizatora": "Mag.",
-      "kInformacije": {
-        "brojMobitela": "09912345678",
-        "email": "marko@mail.com"
+    "organizatorJezika": [
+      {
+        "id": "58c159f3-023d-432d-b843-4126aa2c8e78",
+        "imeOrganizatora": "Marko",
+        "titulaOrganizatora": "Mag.",
+        "kInformacije": {
+          "brojMobitela": "09912345678",
+          "email": "marko@mail.com"
+        }
       }
-    }
+    ]
   },
   {
-    "id": "8139ae5b-f07e-4896-924e-e70c65e4952b",
+    "id": "e820bccc-4800-466a-ae42-6bc5e1c3c732",
     "imeProgramskogJezika": "c",
-    "organizatorJezika": {
-      "id": "92666c51-430e-480a-b8cf-dfd96021c56a",
-      "imeOrganizatora": "Petar",
-      "titulaOrganizatora": "Mag.",
-      "kInformacije": {
-        "brojMobitela": "09912345678",
-        "email": "petar@mail.com"
+    "organizatorJezika": [
+      {
+        "id": "448eb8fd-cc0d-47c4-848b-01f11cdc42a0",
+        "imeOrganizatora": "Petar",
+        "titulaOrganizatora": "Mag.",
+        "kInformacije": {
+          "brojMobitela": "09912345678",
+          "email": "petar@mail.com"
+        }
       }
-    }
+    ]
   },
   {
-    "id": "5a9b64f8-fe1c-41d8-a476-eedd1bc58d42",
+    "id": "4529e236-04d0-4fb6-bafa-afd74d1e64f3",
     "imeProgramskogJezika": "cplusplus",
-    "organizatorJezika": {
-      "id": "d652ced1-db3f-4540-a414-d04ec7cf6f60",
-      "imeOrganizatora": "Dario",
-      "titulaOrganizatora": "Mag.",
-      "kInformacije": {
-        "brojMobitela": "09912345678",
-        "email": "dario@mail.com"
+    "organizatorJezika": [
+      {
+        "id": "3597b311-e520-4a5b-95f1-200d14fb8a14",
+        "imeOrganizatora": "Dario",
+        "titulaOrganizatora": "Mag.",
+        "kInformacije": {
+          "brojMobitela": "09912345678",
+          "email": "dario@mail.com"
+        }
       }
-    }
+    ]
   },
   {
-    "id": "d424613a-2d97-4385-991f-2c4ee73442e5",
+    "id": "e6d7dbb8-3703-4e63-85c5-24dc734ab36a",
     "imeProgramskogJezika": "javascript",
-    "organizatorJezika": {
-      "id": "60d365a3-685d-4a4d-b7a8-0014d5d7ce89",
-      "imeOrganizatora": "Luka",
-      "titulaOrganizatora": "Mag.",
-      "kInformacije": {
-        "brojMobitela": "09912345678",
-        "email": "luka@mail.com"
+    "organizatorJezika": [
+      {
+        "id": "f90518b0-27d9-4a4f-bed1-0ae1b5ecd926",
+        "imeOrganizatora": "Luka",
+        "titulaOrganizatora": "Mag.",
+        "kInformacije": {
+          "brojMobitela": "09912345678",
+          "email": "luka@mail.com"
+        }
       }
-    }
+    ]
   }
 ]

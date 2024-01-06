@@ -67,9 +67,9 @@ namespace Natjecanje_u_programiranju
     {
         public Guid id;
         public string imeProgramskogJezika;
-        public Organizator organizatorJezika;
+        public List<Organizator> organizatorJezika;
 
-        public ProgramskiJezik(Guid noviId, string imeProgramskogJezikaKon, Organizator organizatorJezikaKon)
+        public ProgramskiJezik(Guid noviId, string imeProgramskogJezikaKon, List<Organizator> organizatorJezikaKon)
         {
             id = noviId;
             imeProgramskogJezika = imeProgramskogJezikaKon;
@@ -106,6 +106,22 @@ namespace Natjecanje_u_programiranju
             programskiJezikTima = programskiJezikTimaKon;
             kontaktTima = kontaktTimaKon;
             institucija = institucijaKon;
+        }
+    }
+
+    public struct Rezultati
+    {
+        public int redniBrojKola;
+        public ProgramskiJezik programskiJezikNatjecanja;
+        public Tim timNatjecanjeRez;
+        public int[] zadaci;
+
+        public Rezultati(int redBrojKolaKon, ProgramskiJezik programskiJezikNatjecanjaKon, Tim timNatjecanjeRezKon, int[] zadaciKon)
+        {
+            redniBrojKola = redBrojKolaKon;
+            programskiJezikNatjecanja = programskiJezikNatjecanjaKon;
+            timNatjecanjeRez = timNatjecanjeRezKon;
+            zadaci = zadaciKon;
         }
     }
     class Program
@@ -217,7 +233,10 @@ namespace Natjecanje_u_programiranju
 
             foreach(ProgramskiJezik pJezik in lProgramskihJezika)
             {
-                Console.WriteLine("\nOrganizator Programskog jezika {0} je {1}, titula: {2}, Kontakt informacije: Broj mobitela: {3}, email: {4}", pJezik.imeProgramskogJezika, pJezik.organizatorJezika.imeOrganizatora, pJezik.organizatorJezika.titulaOrganizatora, pJezik.organizatorJezika.kInformacije.brojMobitela, pJezik.organizatorJezika.kInformacije.email);
+                for (int i = 0; i < pJezik.organizatorJezika.Count; i++)
+                {
+                    Console.WriteLine("\nOrganizator Programskog jezika {0} je {1}, titula: {2}, Kontakt informacije: Broj mobitela: {3}, email: {4}", pJezik.imeProgramskogJezika, pJezik.organizatorJezika[i].imeOrganizatora, pJezik.organizatorJezika[i].titulaOrganizatora, pJezik.organizatorJezika[i].kInformacije.brojMobitela, pJezik.organizatorJezika[i].kInformacije.email);
+                }
             }
         }
 
@@ -333,15 +352,19 @@ namespace Natjecanje_u_programiranju
             ulaznaListaTimova[ulazniRedniBroj].lClanoviTima.Add(noviClanTima);
             updateTimove(ulaznaListaTimova);
         }
-        static void izbrisiTim(List<Tim> ulaznaListaTimova, int ulazniRedniBroj, bool odabir = false)
+        static void izbrisiTim(List<Tim> ulaznaListaTimova, int ulazniRedniBroj = 0, bool odabir = false)
         {
             if(odabir)
             {
-
+                prikaziTimove();
+                Console.WriteLine("Unesite redni broj tima kojeg zelite izbrisati");
+                int redniBrojTimaZaIbrisat = Convert.ToInt32(Console.ReadLine()) - 1;
+                Console.WriteLine("Brisemo tim {0}", ulaznaListaTimova[redniBrojTimaZaIbrisat].imeTima);
+                ulaznaListaTimova.RemoveAt(redniBrojTimaZaIbrisat);
             }else
             {
-                Console.WriteLine("Brisemo tim {0}", ulaznaListaTimova[ulazniRedniBroj].imeTima);
-                ulaznaListaTimova.RemoveAt(ulazniRedniBroj);
+                Console.WriteLine("Brisemo tim {0} ", ulaznaListaTimova[ulazniRedniBroj].imeTima);
+               // ulaznaListaTimova.RemoveAt(ulazniRedniBroj);
             }
             updateTimove(ulaznaListaTimova);
         }
@@ -597,6 +620,72 @@ namespace Natjecanje_u_programiranju
             string noviJson = JsonConvert.SerializeObject(lTimova);
             ZapisiDatoteku("timovi.json", noviJson);
         }
+        private static readonly Random random = new Random();
+        private static readonly object syncLock = new object();
+        static int generirajRandom(int min, int max)
+        {
+            lock(syncLock)
+            {
+                return random.Next(min, max);
+            }
+        }
+        static int[] generirajBodove()
+        {
+            int[] MAXBODOVI = new int[] { 30, 40, 60, 70 };
+            int[] bodovi = new int[4];
+            for (int i = 0; i < bodovi.Length; i++)
+            {
+                bodovi[i] = generirajRandom(0, MAXBODOVI[i]);
+            }
+            return bodovi;
+        }
+        static List<Rezultati> generirajKolo(List<Tim> ulaznaListaTimova, List<ProgramskiJezik> ulaznaListaProgramskihJezika, int redniBrojKola)
+        {
+            List<Rezultati> novoKolo = new List<Rezultati>();
+            for(int i = 0; i < ulaznaListaProgramskihJezika.Count; i++)
+            {
+               foreach(Tim tim in ulaznaListaTimova)
+                {
+                    foreach(ProgramskiJezik progJezik in tim.programskiJezikTima)
+                    {
+                        if (progJezik.imeProgramskogJezika == ulaznaListaProgramskihJezika[i].imeProgramskogJezika)
+                        {
+                            Rezultati rezultatiTima = new Rezultati(redniBrojKola, progJezik, tim, generirajBodove());
+                            novoKolo.Add(rezultatiTima);
+                        }
+                    }
+                }
+            }
+            
+            return novoKolo;
+        }
+        static void generirajRezultate()
+        {
+            int BROJKOLA = 10;
+            List<ProgramskiJezik> programskiJezici = JsonConvert.DeserializeObject<List<ProgramskiJezik>>(dohvatiDatoteku("programski_jezici.json"));
+            List<Tim> timovi = JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json"));
+            List<Rezultati> rezultatiNatjecanja = new List<Rezultati>();
+            for(int i=0; i < BROJKOLA; i++)
+            {           
+                foreach(Rezultati rez in generirajKolo(timovi, programskiJezici, i))
+                {
+                    rezultatiNatjecanja.Add(rez);
+                }
+            }
+            foreach(Rezultati rezultat in rezultatiNatjecanja)
+            {
+                Console.WriteLine(rezultat.redniBrojKola);
+                Console.WriteLine(rezultat.timNatjecanjeRez.imeTima);
+                Console.WriteLine(rezultat.programskiJezikNatjecanja.imeProgramskogJezika);
+                Console.WriteLine("Ovo su rezultati tima");
+                foreach(int abc in rezultat.zadaci)
+                {
+                    Console.WriteLine(abc);
+                }
+            }
+            string noviJson = JsonConvert.SerializeObject(rezultatiNatjecanja);
+            ZapisiDatoteku("rezultati.json", noviJson);
+        }
         static void prikaziIzbornikAdmin()
         {
 
@@ -647,11 +736,11 @@ namespace Natjecanje_u_programiranju
 
             List<Organizator> lOrganizatora = JsonConvert.DeserializeObject<List<Organizator>>(dohvatiDatoteku("organizatori.json"));
 
-            ProgramskiJezik python = new ProgramskiJezik(Guid.NewGuid(), "python", lOrganizatora[0]);
-            ProgramskiJezik csharp = new ProgramskiJezik(Guid.NewGuid(), "csharp", lOrganizatora[1]);
-            ProgramskiJezik c = new ProgramskiJezik(Guid.NewGuid(), "c", lOrganizatora[2]);
-            ProgramskiJezik cplusplus = new ProgramskiJezik(Guid.NewGuid(), "cplusplus", lOrganizatora[3]);
-            ProgramskiJezik javascript = new ProgramskiJezik(Guid.NewGuid(), "javascript", lOrganizatora[4]);
+            ProgramskiJezik python = new ProgramskiJezik(Guid.NewGuid(), "python", new List<Organizator> { lOrganizatora[0] });
+            ProgramskiJezik csharp = new ProgramskiJezik(Guid.NewGuid(), "csharp", new List<Organizator> { lOrganizatora[1] });
+            ProgramskiJezik c = new ProgramskiJezik(Guid.NewGuid(), "c", new List<Organizator> { lOrganizatora[2] });
+            ProgramskiJezik cplusplus = new ProgramskiJezik(Guid.NewGuid(), "cplusplus", new List<Organizator> { lOrganizatora[3] });
+            ProgramskiJezik javascript = new ProgramskiJezik(Guid.NewGuid(), "javascript", new List<Organizator> { lOrganizatora[4] });
 
             List<ProgramskiJezik> lProgramskihJezika = new List<ProgramskiJezik> { python, csharp, c, cplusplus, javascript };
 
@@ -700,6 +789,10 @@ namespace Natjecanje_u_programiranju
                  sw.Write(noviJson);
              }*/
             //Redoslijed kreiranja:  1. Organizator, 2. Programski jezik, 3. Natjecatelji, 4. Timovi
+            /* kreirajOrganizatore();
+             kreirajProgramskeJezike();
+             kreirajNatjecatelje();
+             kreirajTimove();*/
             //kreirajProgramskeJezike();
             //kreirajOrganizatore();
             //kreirajNatjecatelje();
@@ -708,7 +801,9 @@ namespace Natjecanje_u_programiranju
             //prikaziOrganizatore();
             //dodavanjeTima();
             //Izbornik();
-            azurirajTimove();
+            //azurirajTimove();
+            //izbrisiTim(ulaznaListaTimova: JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json")), odabir: true);
+            generirajRezultate();
             Console.ReadKey();
         }
     }
