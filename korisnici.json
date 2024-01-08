@@ -1,1 +1,14 @@
-[{"id":"a01d2fd3-c429-4e16-ac37-1893809279ed","imeKorisnika":"Antun","lozinkaKorisnika":"1234","razinaPravaKorisnika":"natjecatelj"},{"id":"8ac0329e-b739-4e77-baa0-7f87b12efabe","imeKorisnika":"Luka","lozinkaKorisnika":"4321","razinaPravaKorisnika":"admin"}]
+[
+  {
+    "id": "a01d2fd3-c429-4e16-ac37-1893809279ed",
+    "imeKorisnika": "Antun",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "8ac0329e-b739-4e77-baa0-7f87b12efabe",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  }
+]

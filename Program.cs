@@ -688,13 +688,79 @@ namespace Natjecanje_u_programiranju
         }
         static void prikaziIzbornikAdmin()
         {
+            Console.WriteLine("Unesite vaš izbor");
+            Console.WriteLine("1. Pregled svih timova\n2. Pregled organizatora natjecanja\n3. Dodavanje timova\n4. Dodavanje osoba\n5. Ažuriranje timova\n6. Brisanje timova\n7.Pretraživanje timova\n8. Simulacija Lige\n 9. Statistika");
+            int odabir = Convert.ToInt32(Console.ReadLine());
+            switch (odabir)
+            {
+                case 1:
+                    prikaziTimove();
+                    break;
+                case 2:
+                    prikaziOrganizatore();
+                    break;
+                case 3:
+                    dodavanjeTima();
+                    break;
+                case 4:
 
+                    break;
+                case 5:
+                    azurirajTimove();
+                    break;
+                case 6:
+                    izbrisiTim(ulaznaListaTimova: JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json")), odabir: true);
+                    break;
+                case 7:
+                    break;
+                case 8:
+                    break;
+                case 9:
+                    break;
+                default:
+                    Console.WriteLine("Error pri switch-u u funkciji prikaziIzbornikAdmin");
+                    break;
+            }
+        }
+        static void prikaziIzbornikKorisnik()
+        {
+            Console.WriteLine("Unesite vaš izbor");
+            Console.WriteLine("1. Pregled svih timova\n2. Pregled organizatora natjecanja\n3. Pretraživanje Tima\n4. Simulacija Lige\n5. Statistika");
+            int odabir = Convert.ToInt32(Console.ReadLine());
+            switch (odabir)
+            {
+                case 1:
+                    prikaziTimove();
+                    break;
+                case 2:
+                    prikaziOrganizatore();
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                default:
+                    Console.WriteLine("Error pri switch-u u funkciji prikaziIzbornikKorisnik");
+                    break;
+            }
         }
         static void Izbornik()
         {
             Korisnik trenutacniKorisnik = Login();
-           
-            
+            switch (trenutacniKorisnik.razinaPravaKorisnika)
+            {
+                case "admin":
+                    prikaziIzbornikAdmin();
+                    break;
+                case "natjecatelj":
+                    prikaziIzbornikKorisnik();
+                    break;
+                default:
+                    Console.WriteLine("Error pri prikazivanju izbornika");
+                    break;
+            }
         }
         
         static void kreirajTimove()
@@ -803,7 +869,8 @@ namespace Natjecanje_u_programiranju
             //Izbornik();
             //azurirajTimove();
             //izbrisiTim(ulaznaListaTimova: JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json")), odabir: true);
-            generirajRezultate();
+            //generirajRezultate();
+            Izbornik();
             Console.ReadKey();
         }
     }
