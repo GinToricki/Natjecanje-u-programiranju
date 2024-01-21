@@ -163,7 +163,7 @@ namespace Natjecanje_u_programiranju
         static void ZapisiLog(string akcija)
         {
             string path = Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "logovi.txt");
-            string tekst = $"Korisnik {TRENUTACNI_KORISNIK.imeKorisnika} (id: {TRENUTACNI_KORISNIK.id})" + akcija;
+            string tekst = $"Korisnik {TRENUTACNI_KORISNIK.imeKorisnika} (id: {TRENUTACNI_KORISNIK.id}) " + akcija;
             using(StreamWriter sw = File.AppendText(path))
             {
                 sw.WriteLine(tekst);
@@ -202,6 +202,44 @@ namespace Natjecanje_u_programiranju
             {
                 Console.WriteLine("Error pri pisanje u datoteku {0}", imeDatoteke);
             }
+        }
+        static void pregledObavijesti(List<Natjecatelj> ulaznaListaNatjecatelja, List<Organizator> ulaznaListaOrganizatora, List<Obavijest> ulaznaListaObavijesti)
+        {
+            
+            foreach(Obavijest ob in ulaznaListaObavijesti)
+            {
+                if(ob.idOrganizatora == TRENUTACNI_KORISNIK.id)
+                {
+                    foreach (Natjecatelj natjecatelj in ulaznaListaNatjecatelja)
+                    {
+                        Console.WriteLine("1 " + ob.idKorisnika);
+                        Console.WriteLine("2 " + natjecatelj.id);
+                        if (ob.idKorisnika == natjecatelj.id)
+                        {
+                            Console.WriteLine($"Za: {TRENUTACNI_KORISNIK.imeKorisnika}\nOd: {natjecatelj.imeNatjecatelja} {natjecatelj.prezimeNatjecatelja}\n{ob.obavijest}\nPoslano:{ob.datum}");
+                        }
+                    }
+                }
+            }
+            
+        }
+        static void DodajKorisnika(string imeKorisnika, Guid idKorisnika, string razinaPrava)
+        {
+            List<Korisnik> lKorisnika = JsonConvert.DeserializeObject<List<Korisnik>>(dohvatiDatoteku("korisnici.json"));
+            Console.WriteLine("Unesite Lozinku za novog korisnika: ");
+            string lozinka = Console.ReadLine();
+            if(razinaPrava == "admin")
+            {
+                Korisnik noviKorisnik = new Korisnik(idKorisnika, imeKorisnika, "4321", razinaPrava);
+                lKorisnika.Add(noviKorisnik);
+            }
+            else
+            {
+                Korisnik noviKorisnik = new Korisnik(idKorisnika, imeKorisnika, "1234", razinaPrava);
+                lKorisnika.Add(noviKorisnik);
+            }
+            string noviJson = JsonConvert.SerializeObject(lKorisnika);
+            ZapisiDatoteku("korisnici.json", noviJson);
         }
         static Korisnik Login()
         {
@@ -475,7 +513,7 @@ namespace Natjecanje_u_programiranju
             string prezimeNatjecatelja = Console.ReadLine();
             Natjecatelj noviNatjecatelj = new Natjecatelj(Guid.NewGuid(), imeNatjecatelja, prezimeNatjecatelja, PotvrdiOib());
             ulaznaListaNatjecatelja.Add(noviNatjecatelj);
-
+            DodajKorisnika(imeNatjecatelja, noviNatjecatelj.id, "natjecatelj");
             string noviJson = JsonConvert.SerializeObject(ulaznaListaNatjecatelja);
             ZapisiDatoteku("natjecatelji.json", noviJson);
             return noviNatjecatelj;
@@ -503,6 +541,7 @@ namespace Natjecanje_u_programiranju
             string prezimeOrganizatora = Console.ReadLine();
             Organizator noviOrganizator = new Organizator(Guid.NewGuid(), imeOrganizatora,prezimeOrganizatora, PotvrdiOib(), titulaOrganizatora,false, DodavanjeKontakta());
 
+            DodajKorisnika(noviOrganizator.imeOrganizatora, noviOrganizator.id, "natjecatelj");
             ulaznaListaOrganizatora.Add(noviOrganizator);
             string noviJson = JsonConvert.SerializeObject(ulaznaListaOrganizatora);
             ZapisiDatoteku("organizatori.json", noviJson);
@@ -1186,13 +1225,13 @@ namespace Natjecanje_u_programiranju
                 Console.WriteLine($"Iz institucije {institucija} sudjeluje {brojTimovaUInstituciji} timova u natjecanju");
             }
         }
-        static void prikaziIzbornikAdmin(List<Tim> ulaznaListaTimova, List<Organizator> ulaznaListaOrganizatora, List<ProgramskiJezik> ulaznaListaProgJezika, List<Natjecatelj> ulaznaListaNatjecatelja, List<Rezultati> ulaznaListaRezultata)
+        static void prikaziIzbornikAdmin(List<Tim> ulaznaListaTimova, List<Organizator> ulaznaListaOrganizatora, List<ProgramskiJezik> ulaznaListaProgJezika, List<Natjecatelj> ulaznaListaNatjecatelja, List<Rezultati> ulaznaListaRezultata, List<Obavijest> ulaznaListaObavijesti)
         {
             bool exit = true;
             Console.WriteLine("Unesite vaš izbor");
             while (exit)
             {
-                Console.WriteLine("1. Pregled svih timova\n2. Pregled organizatora natjecanja\n3. Dodavanje timova\n4. Dodavanje osoba\n5. Ažuriranje timova\n6. Brisanje timova\n7. Pretraživanje timova\n8. Simulacija Lige\n9. Statistika\n0. za Izlaz");
+                Console.WriteLine("1. Pregled svih timova\n2. Pregled organizatora natjecanja\n3. Dodavanje timova\n4. Dodavanje osoba\n5. Ažuriranje timova\n6. Brisanje timova\n7. Pretraživanje timova\n8. Simulacija Lige\n9. Statistika\n10. Za pregled obavijesti\n0. za Izlaz");
                 string odabir = Console.ReadLine();
                 Console.Clear();
                 switch (odabir)
@@ -1226,6 +1265,9 @@ namespace Natjecanje_u_programiranju
                         break;
                     case "9":
                         PregledStatistike(ulaznaListaTimova, ulaznaListaProgJezika);
+                        break;
+                    case "10":
+                        pregledObavijesti(ulaznaListaNatjecatelja, ulaznaListaOrganizatora, ulaznaListaObavijesti);
                         break;
                     default:
                         Console.WriteLine("Krivi unos");
@@ -1263,21 +1305,27 @@ namespace Natjecanje_u_programiranju
                 switch (odabir)
                 {
                     case "1":
+                        ZapisiLog("Je odabrao opciju prikazi timove");
                         PrikaziTimove(ulaznaListaTimova, ulaznaListaNatjecatelja, ulaznaListaProgJezika);
                         break;
                     case "2":
+                        ZapisiLog("Je odabrao opciju prikazi Organizatore");
                         prikaziOrganizatore(ulaznaListaOrganizatora, ulaznaListaProgJezika, true, idKorisnika); ;
                         break;
                     case "3":
+                        ZapisiLog("Je odabrao opciju prikazi pretrazi timove");
                         PretraziTimove(ulaznaListaTimova);
                         break;
                     case "4":
+                        ZapisiLog("Je odabrao opciju Simulacije Lige");
                         SimulacijaLige(ulaznaListaTimova, ulaznaListaProgJezika, ulaznaListaRezultata);
                         break;
                     case "5":
+                        ZapisiLog("Je odabrao opciju pregled statistike");
                         PregledStatistike(ulaznaListaTimova, ulaznaListaProgJezika);
                         break;
                     case "6":
+                        ZapisiLog("Je izasao iz programa");
                         exit = false;
                         break;
                     default:
@@ -1291,15 +1339,17 @@ namespace Natjecanje_u_programiranju
             
             Korisnik trenutacniKorisnik = Login();
             TRENUTACNI_KORISNIK = trenutacniKorisnik;
+            ZapisiLog("se ulogirao");
             List<Tim> lTimova = JsonConvert.DeserializeObject<List<Tim>>(dohvatiDatoteku("timovi.json"));
             List<Organizator> lOrganizatora = JsonConvert.DeserializeObject<List<Organizator>>(dohvatiDatoteku("organizatori.json"));
             List<ProgramskiJezik> lPJezika = JsonConvert.DeserializeObject<List<ProgramskiJezik>>(dohvatiDatoteku("programski_jezici.json"));
             List<Natjecatelj> lNatjecatelja = JsonConvert.DeserializeObject<List<Natjecatelj>>(dohvatiDatoteku("natjecatelji.json"));
             List<Rezultati> lRezultata = JsonConvert.DeserializeObject<List<Rezultati>>(dohvatiDatoteku("rezultati.json"));
+            List<Obavijest> lObavijesti = JsonConvert.DeserializeObject<List<Obavijest>>(dohvatiDatoteku("obavijesti.json"));
             switch (trenutacniKorisnik.razinaPravaKorisnika)
             {
                 case "admin":
-                    prikaziIzbornikAdmin(lTimova, lOrganizatora, lPJezika, lNatjecatelja, lRezultata);
+                    prikaziIzbornikAdmin(lTimova, lOrganizatora, lPJezika, lNatjecatelja, lRezultata, lObavijesti);
                     break;
                 case "natjecatelj":
                     prikaziIzbornikKorisnik(lTimova, lOrganizatora, lPJezika, lNatjecatelja, lRezultata, trenutacniKorisnik.id);
@@ -1309,7 +1359,19 @@ namespace Natjecanje_u_programiranju
                     break;
             }
         }
-        
+        static void KreirakKorisnike()
+        {
+            List<Natjecatelj> lNatjecatelja = JsonConvert.DeserializeObject<List<Natjecatelj>>(dohvatiDatoteku("natjecatelji.json"));
+            List<Organizator> lOrganizatora = JsonConvert.DeserializeObject<List<Organizator>>(dohvatiDatoteku("organizatori.json"));
+            foreach(Natjecatelj n in lNatjecatelja)
+            {
+                DodajKorisnika(n.imeNatjecatelja, n.id, "natjecatelj");
+            }
+            foreach(Organizator o in lOrganizatora)
+            {
+                DodajKorisnika(o.imeOrganizatora, o.id, "admin");
+            }
+        }
         static void kreirajTimove()
         {
             string nazivDatoteke = "timovi.json";
@@ -1406,6 +1468,7 @@ namespace Natjecanje_u_programiranju
              kreirajProgramskeJezike();
              kreirajNatjecatelje();
              kreirajTimove();*/
+            //KreirakKorisnike();
             Izbornik();
         }
     }

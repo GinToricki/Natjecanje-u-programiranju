@@ -10,5 +10,245 @@
     "imeKorisnika": "Luka",
     "lozinkaKorisnika": "4321",
     "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+    "imeKorisnika": "Marko",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "a83ac941-6971-4948-ba3c-2690c8d663e3",
+    "imeKorisnika": "Dominik",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "0acb9065-f819-42e3-8d02-fb7739d74b7d",
+    "imeKorisnika": "Petar",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "51b507a7-92a4-4177-aeca-207b7c82d9a9",
+    "imeKorisnika": "Ana",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "58da2b71-1dee-4eba-ba0b-11b7a087702f",
+    "imeKorisnika": "Mario",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "b347d6a0-db22-4c63-a80a-244e30c434c3",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "be059b48-897f-4c7c-82c4-04bbdb5542bf",
+    "imeKorisnika": "Barbara",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "cf98b2f0-09c7-4120-b664-1e9965b4df9f",
+    "imeKorisnika": "Antonio",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "a8f53d1f-b733-4a62-90b3-7085cc2529bb",
+    "imeKorisnika": "Domagoj",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "a98804d9-72c2-46eb-94a9-ee67fe271483",
+    "imeKorisnika": "Antonela",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "95ab188f-e694-41c6-8ac3-b061f3b91fe4",
+    "imeKorisnika": "Rudi",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "57c2f060-ce67-491c-96a4-f2fd0e3d128e",
+    "imeKorisnika": "Tomislav",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "02736a9f-e3df-4350-864f-3694c4b5cd72",
+    "imeKorisnika": "Karlo",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "b59e9210-02c8-4ce3-b7c2-9d7ba88afdb2",
+    "imeKorisnika": "Fran",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "ef43ff9d-f162-4713-ac46-2593881086a5",
+    "imeKorisnika": "Iva",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "1bd62fa8-5d53-44f0-adce-7782ed36f63e",
+    "imeKorisnika": "Josip",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "42808e4e-5e8a-47c6-8568-3f2b96239823",
+    "imeKorisnika": "Marko",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "35db4594-16c2-4923-ac02-aa8e7390d4dd",
+    "imeKorisnika": "Petar",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "73c18429-ae00-4526-803c-626b1994cca4",
+    "imeKorisnika": "Dario",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "c070e0a9-e5e4-457f-b9dc-418835b708b2",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+    "imeKorisnika": "Marko",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "a83ac941-6971-4948-ba3c-2690c8d663e3",
+    "imeKorisnika": "Dominik",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "0acb9065-f819-42e3-8d02-fb7739d74b7d",
+    "imeKorisnika": "Petar",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "51b507a7-92a4-4177-aeca-207b7c82d9a9",
+    "imeKorisnika": "Ana",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "58da2b71-1dee-4eba-ba0b-11b7a087702f",
+    "imeKorisnika": "Mario",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "b347d6a0-db22-4c63-a80a-244e30c434c3",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "be059b48-897f-4c7c-82c4-04bbdb5542bf",
+    "imeKorisnika": "Barbara",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "cf98b2f0-09c7-4120-b664-1e9965b4df9f",
+    "imeKorisnika": "Antonio",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "a8f53d1f-b733-4a62-90b3-7085cc2529bb",
+    "imeKorisnika": "Domagoj",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "a98804d9-72c2-46eb-94a9-ee67fe271483",
+    "imeKorisnika": "Antonela",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "95ab188f-e694-41c6-8ac3-b061f3b91fe4",
+    "imeKorisnika": "Rudi",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "57c2f060-ce67-491c-96a4-f2fd0e3d128e",
+    "imeKorisnika": "Tomislav",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "02736a9f-e3df-4350-864f-3694c4b5cd72",
+    "imeKorisnika": "Karlo",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "b59e9210-02c8-4ce3-b7c2-9d7ba88afdb2",
+    "imeKorisnika": "Fran",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "ef43ff9d-f162-4713-ac46-2593881086a5",
+    "imeKorisnika": "Iva",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "1bd62fa8-5d53-44f0-adce-7782ed36f63e",
+    "imeKorisnika": "Josip",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "42808e4e-5e8a-47c6-8568-3f2b96239823",
+    "imeKorisnika": "Marko",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "35db4594-16c2-4923-ac02-aa8e7390d4dd",
+    "imeKorisnika": "Petar",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "73c18429-ae00-4526-803c-626b1994cca4",
+    "imeKorisnika": "Dario",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "c070e0a9-e5e4-457f-b9dc-418835b708b2",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "4321",
+    "razinaPravaKorisnika": "admin"
   }
 ]

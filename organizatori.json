@@ -1,1 +1,62 @@
-[{"id":"1bd62fa8-5d53-44f0-adce-7782ed36f63e","imeOrganizatora":"Josip","prezimeOrganizatora":"Horvat","OIBOrganizatora":"0123456789","titulaOrganizatora":"Mag.","voditelj":true,"kInformacije":{"brojMobitela":"09912345678","email":"josip@mail.com"}},{"id":"42808e4e-5e8a-47c6-8568-3f2b96239823","imeOrganizatora":"Marko","prezimeOrganizatora":"Marić","OIBOrganizatora":"0123456789","titulaOrganizatora":"Mag.","voditelj":false,"kInformacije":{"brojMobitela":"09912345678","email":"marko@mail.com"}},{"id":"35db4594-16c2-4923-ac02-aa8e7390d4dd","imeOrganizatora":"Petar","prezimeOrganizatora":"Perić","OIBOrganizatora":"0123456789","titulaOrganizatora":"Mag.","voditelj":false,"kInformacije":{"brojMobitela":"09912345678","email":"petar@mail.com"}},{"id":"73c18429-ae00-4526-803c-626b1994cca4","imeOrganizatora":"Dario","prezimeOrganizatora":"Kovač","OIBOrganizatora":"0123456789","titulaOrganizatora":"Mag.","voditelj":false,"kInformacije":{"brojMobitela":"09912345678","email":"dario@mail.com"}},{"id":"c070e0a9-e5e4-457f-b9dc-418835b708b2","imeOrganizatora":"Luka","prezimeOrganizatora":"Horvat","OIBOrganizatora":"0123456789","titulaOrganizatora":"Mag.","voditelj":false,"kInformacije":{"brojMobitela":"09912345678","email":"luka@mail.com"}}]
+[
+  {
+    "id": "1bd62fa8-5d53-44f0-adce-7782ed36f63e",
+    "imeOrganizatora": "Josip",
+    "prezimeOrganizatora": "Horvat",
+    "OIBOrganizatora": "0123456789",
+    "titulaOrganizatora": "Mag.",
+    "voditelj": true,
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "josip@mail.com"
+    }
+  },
+  {
+    "id": "42808e4e-5e8a-47c6-8568-3f2b96239823",
+    "imeOrganizatora": "Marko",
+    "prezimeOrganizatora": "Marić",
+    "OIBOrganizatora": "0123456789",
+    "titulaOrganizatora": "Mag.",
+    "voditelj": false,
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "marko@mail.com"
+    }
+  },
+  {
+    "id": "35db4594-16c2-4923-ac02-aa8e7390d4dd",
+    "imeOrganizatora": "Petar",
+    "prezimeOrganizatora": "Perić",
+    "OIBOrganizatora": "0123456789",
+    "titulaOrganizatora": "Mag.",
+    "voditelj": false,
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "petar@mail.com"
+    }
+  },
+  {
+    "id": "73c18429-ae00-4526-803c-626b1994cca4",
+    "imeOrganizatora": "Dario",
+    "prezimeOrganizatora": "Kovač",
+    "OIBOrganizatora": "0123456789",
+    "titulaOrganizatora": "Mag.",
+    "voditelj": false,
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "dario@mail.com"
+    }
+  },
+  {
+    "id": "c070e0a9-e5e4-457f-b9dc-418835b708b2",
+    "imeOrganizatora": "Luka",
+    "prezimeOrganizatora": "Horvat",
+    "OIBOrganizatora": "0123456789",
+    "titulaOrganizatora": "Mag.",
+    "voditelj": false,
+    "kInformacije": {
+      "brojMobitela": "09912345678",
+      "email": "luka@mail.com"
+    }
+  }
+]

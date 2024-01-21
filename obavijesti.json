@@ -1,14 +1,1 @@
-[
-  {
-    "idKorisnika": "a01d2fd3-c429-4e16-ac37-1893809279ed",
-    "idOrganizatora": "42808e4e-5e8a-47c6-8568-3f2b96239823",
-    "obavijest": "Test",
-    "datum": "2024-01-21T00:53:09.7196962+01:00"
-  },
-  {
-    "idKorisnika": "a01d2fd3-c429-4e16-ac37-1893809279ed",
-    "idOrganizatora": "35db4594-16c2-4923-ac02-aa8e7390d4dd",
-    "obavijest": "Test2",
-    "datum": "2024-01-21T00:54:11.4415086+01:00"
-  }
-]
+[{"idKorisnika":"a01d2fd3-c429-4e16-ac37-1893809279ed","idOrganizatora":"42808e4e-5e8a-47c6-8568-3f2b96239823","obavijest":"Test","datum":"2024-01-21T00:53:09.7196962+01:00"},{"idKorisnika":"a01d2fd3-c429-4e16-ac37-1893809279ed","idOrganizatora":"35db4594-16c2-4923-ac02-aa8e7390d4dd","obavijest":"Test2","datum":"2024-01-21T00:54:11.4415086+01:00"},{"idKorisnika":"a01d2fd3-c429-4e16-ac37-1893809279ed","idOrganizatora":"1bd62fa8-5d53-44f0-adce-7782ed36f63e","obavijest":"Test3","datum":"2024-01-21T01:12:47.0142733+01:00"},{"idKorisnika":"a01d2fd3-c429-4e16-ac37-1893809279ed","idOrganizatora":"1bd62fa8-5d53-44f0-adce-7782ed36f63e","obavijest":"Testna Poruka 23","datum":"2024-01-22T00:24:00.6030236+01:00"},{"idKorisnika":"be91f7ae-7fc5-44cf-a768-3313651d67e0","idOrganizatora":"1bd62fa8-5d53-44f0-adce-7782ed36f63e","obavijest":"TesnaPoruka","datum":"2024-01-22T00:31:09.7992002+01:00"}]
