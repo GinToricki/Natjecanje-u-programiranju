@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logovi.txt" />
     <None Include="App.config" />
     <None Include="korisnici.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

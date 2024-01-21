@@ -1,3 +1,14 @@
-{
-
-}
+[
+  {
+    "idKorisnika": "a01d2fd3-c429-4e16-ac37-1893809279ed",
+    "idOrganizatora": "42808e4e-5e8a-47c6-8568-3f2b96239823",
+    "obavijest": "Test",
+    "datum": "2024-01-21T00:53:09.7196962+01:00"
+  },
+  {
+    "idKorisnika": "a01d2fd3-c429-4e16-ac37-1893809279ed",
+    "idOrganizatora": "35db4594-16c2-4923-ac02-aa8e7390d4dd",
+    "obavijest": "Test2",
+    "datum": "2024-01-21T00:54:11.4415086+01:00"
+  }
+]
