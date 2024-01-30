@@ -250,5 +250,35 @@
     "imeKorisnika": "Luka",
     "lozinkaKorisnika": "4321",
     "razinaPravaKorisnika": "admin"
+  },
+  {
+    "id": "ae315bd5-1319-49c4-bc3a-16f24e7b8da1",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "2b19853e-629b-4fb4-b5db-2d0ecabec915",
+    "imeKorisnika": "Toni",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "9eef80cb-0e30-4d65-b313-5f877375e325",
+    "imeKorisnika": "Marko",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "8f7fc86b-2061-4e80-94d2-996fbe4927cb",
+    "imeKorisnika": "Tomislav",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
+  },
+  {
+    "id": "1628a872-fa31-475b-b7ea-c8462d76f600",
+    "imeKorisnika": "Luka",
+    "lozinkaKorisnika": "1234",
+    "razinaPravaKorisnika": "natjecatelj"
   }
 ]

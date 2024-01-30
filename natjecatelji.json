@@ -61,9 +61,9 @@
   },
   {
     "id": "95ab188f-e694-41c6-8ac3-b061f3b91fe4",
-    "imeNatjecatelja": "Rudi",
-    "prezimeNatjecatelja": "Kovač",
-    "OIBNatjecatelja": "3215213512"
+    "imeNatjecatelja": "Matko",
+    "prezimeNatjecatelja": "Maric",
+    "OIBNatjecatelja": "4854854855"
   },
   {
     "id": "57c2f060-ce67-491c-96a4-f2fd0e3d128e",
@@ -88,5 +88,35 @@
     "imeNatjecatelja": "Iva",
     "prezimeNatjecatelja": "Novak",
     "OIBNatjecatelja": "3215213512"
+  },
+  {
+    "id": "ae315bd5-1319-49c4-bc3a-16f24e7b8da1",
+    "imeNatjecatelja": "Luka",
+    "prezimeNatjecatelja": "Maric",
+    "OIBNatjecatelja": "1234567890"
+  },
+  {
+    "id": "2b19853e-629b-4fb4-b5db-2d0ecabec915",
+    "imeNatjecatelja": "Toni",
+    "prezimeNatjecatelja": "Tonik",
+    "OIBNatjecatelja": "0988111333"
+  },
+  {
+    "id": "9eef80cb-0e30-4d65-b313-5f877375e325",
+    "imeNatjecatelja": "Marko",
+    "prezimeNatjecatelja": "Markan",
+    "OIBNatjecatelja": "9998888222"
+  },
+  {
+    "id": "8f7fc86b-2061-4e80-94d2-996fbe4927cb",
+    "imeNatjecatelja": "Tomislav",
+    "prezimeNatjecatelja": "Novi",
+    "OIBNatjecatelja": "1234567891"
+  },
+  {
+    "id": "1628a872-fa31-475b-b7ea-c8462d76f600",
+    "imeNatjecatelja": "Luka",
+    "prezimeNatjecatelja": "Matic",
+    "OIBNatjecatelja": "5555444111"
   }
 ]

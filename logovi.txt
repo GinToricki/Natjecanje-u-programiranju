@@ -26,3 +26,66 @@ Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) se ulogirao
 Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) Je odabrao opciju prikazi Organizatore
 Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) Je izasao iz programa
 Korisnik Josip (id: 1bd62fa8-5d53-44f0-adce-7782ed36f63e) se ulogirao
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) se ulogirao
+Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) Je odabrao opciju Simulacije Lige
+Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/28/2024 12:41:09 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/28/2024 12:41:11 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi Organizatore
+1/28/2024 12:41:17 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi timove
+1/28/2024 12:41:18 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi Organizatore
+1/28/2024 12:48:04 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/28/2024 12:48:06 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi pretrazi timove
+1/28/2024 12:48:12 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi pretrazi timove
+1/28/2024 1:05:02 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/28/2024 1:05:03 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi pretrazi timove
+1/28/2024 1:07:11 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/28/2024 1:07:13 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju prikazi pretrazi timove
+1/30/2024 10:57:24 AM Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/30/2024 11:00:50 AM Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/30/2024 11:02:15 AM Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/30/2024 11:03:07 AM Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/30/2024 11:06:51 AM Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/30/2024 11:11:08 AM Korisnik Marko (id: 42808e4e-5e8a-47c6-8568-3f2b96239823) se ulogirao
+1/30/2024 4:41:21 PM Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) se ulogirao
+1/30/2024 4:41:22 PM Korisnik Marko (id: be91f7ae-7fc5-44cf-a768-3313651d67e0) Je odabrao opciju prikazi timove
+1/30/2024 5:53:34 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 5:53:39 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 5:54:45 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 5:54:46 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 5:59:20 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 5:59:22 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 5:59:43 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 5:59:44 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 6:12:15 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 6:12:16 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 6:13:57 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 6:14:02 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 6:16:55 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 6:16:57 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 6:26:47 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 6:26:50 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 6:31:18 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) se ulogirao
+1/30/2024 6:31:20 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je odabrao opciju Simulacije Lige
+1/30/2024 6:32:15 PM Korisnik Luka (id: b347d6a0-db22-4c63-a80a-244e30c434c3) Je izasao iz programa

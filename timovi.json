@@ -1,1 +1,284 @@
-[{"id":"c5183454-1c7e-4e98-b68a-4a097451133d","imeTima":"A-tim","kapetanTima":{"id":"be91f7ae-7fc5-44cf-a768-3313651d67e0","imeNatjecatelja":"Marko","prezimeNatjecatelja":"Horvat","OIBNatjecatelja":"3215213512"},"idKapetanaTima":"be91f7ae-7fc5-44cf-a768-3313651d67e0","lClanoviTima":[{"id":"be91f7ae-7fc5-44cf-a768-3313651d67e0","imeNatjecatelja":"Marko","prezimeNatjecatelja":"Horvat","OIBNatjecatelja":"3215213512"},{"id":"a83ac941-6971-4948-ba3c-2690c8d663e3","imeNatjecatelja":"Dominik","prezimeNatjecatelja":"Moslavac","OIBNatjecatelja":"3215213512"},{"id":"0acb9065-f819-42e3-8d02-fb7739d74b7d","imeNatjecatelja":"Petar","prezimeNatjecatelja":"Kovačević","OIBNatjecatelja":"3215213512"}],"lIdClanovaTima":["be91f7ae-7fc5-44cf-a768-3313651d67e0","a83ac941-6971-4948-ba3c-2690c8d663e3","0acb9065-f819-42e3-8d02-fb7739d74b7d"],"lIdProgramskihJezikaTima":["bb737c87-faea-468c-b546-39d7e6ff911e","d6a2d60d-24a7-4677-984a-91385d038e4b"],"kontaktTima":{"brojMobitela":"123-456-7777","email":"a-tim@mail.com"},"institucija":"VUV"},{"id":"6eff2f54-b964-4671-a331-8201def7b687","imeTima":"A-tim","kapetanTima":{"id":"51b507a7-92a4-4177-aeca-207b7c82d9a9","imeNatjecatelja":"Ana","prezimeNatjecatelja":"Babić","OIBNatjecatelja":"3215213512"},"idKapetanaTima":"51b507a7-92a4-4177-aeca-207b7c82d9a9","lClanoviTima":[{"id":"51b507a7-92a4-4177-aeca-207b7c82d9a9","imeNatjecatelja":"Ana","prezimeNatjecatelja":"Babić","OIBNatjecatelja":"3215213512"},{"id":"58da2b71-1dee-4eba-ba0b-11b7a087702f","imeNatjecatelja":"Mario","prezimeNatjecatelja":"Marić","OIBNatjecatelja":"3215213512"},{"id":"b347d6a0-db22-4c63-a80a-244e30c434c3","imeNatjecatelja":"Luka","prezimeNatjecatelja":"Jurić","OIBNatjecatelja":"3215213512"}],"lIdClanovaTima":["51b507a7-92a4-4177-aeca-207b7c82d9a9","58da2b71-1dee-4eba-ba0b-11b7a087702f","b347d6a0-db22-4c63-a80a-244e30c434c3"],"lIdProgramskihJezikaTima":["bb737c87-faea-468c-b546-39d7e6ff911e","09d11979-e0df-4a69-8eb7-e07f1fffe84a"],"kontaktTima":{"brojMobitela":"123-456-7777","email":"b-tim@mail.com"},"institucija":"FER"},{"id":"30015c75-544c-4c32-9ab1-0120f5faa30d","imeTima":"A-tim","kapetanTima":{"id":"be91f7ae-7fc5-44cf-a768-3313651d67e0","imeNatjecatelja":"Marko","prezimeNatjecatelja":"Horvat","OIBNatjecatelja":"3215213512"},"idKapetanaTima":"be059b48-897f-4c7c-82c4-04bbdb5542bf","lClanoviTima":[{"id":"be059b48-897f-4c7c-82c4-04bbdb5542bf","imeNatjecatelja":"Barbara","prezimeNatjecatelja":"Marić","OIBNatjecatelja":"3215213512"},{"id":"cf98b2f0-09c7-4120-b664-1e9965b4df9f","imeNatjecatelja":"Antonio","prezimeNatjecatelja":"Horvat","OIBNatjecatelja":"3215213512"},{"id":"a8f53d1f-b733-4a62-90b3-7085cc2529bb","imeNatjecatelja":"Domagoj","prezimeNatjecatelja":"Babić","OIBNatjecatelja":"3215213512"}],"lIdClanovaTima":["be059b48-897f-4c7c-82c4-04bbdb5542bf","cf98b2f0-09c7-4120-b664-1e9965b4df9f","a8f53d1f-b733-4a62-90b3-7085cc2529bb"],"lIdProgramskihJezikaTima":["bb737c87-faea-468c-b546-39d7e6ff911e","c3368baf-d4fe-425a-9a67-247eec9ea683","d6a2d60d-24a7-4677-984a-91385d038e4b","09d11979-e0df-4a69-8eb7-e07f1fffe84a"],"kontaktTima":{"brojMobitela":"123-456-7777","email":"c-tim@mail.com"},"institucija":"FOI"},{"id":"4b97f872-9740-49f6-92cd-b00c04d2fd51","imeTima":"A-tim","kapetanTima":{"id":"be91f7ae-7fc5-44cf-a768-3313651d67e0","imeNatjecatelja":"Marko","prezimeNatjecatelja":"Horvat","OIBNatjecatelja":"3215213512"},"idKapetanaTima":"a98804d9-72c2-46eb-94a9-ee67fe271483","lClanoviTima":[{"id":"a98804d9-72c2-46eb-94a9-ee67fe271483","imeNatjecatelja":"Antonela","prezimeNatjecatelja":"Jurić","OIBNatjecatelja":"3215213512"},{"id":"95ab188f-e694-41c6-8ac3-b061f3b91fe4","imeNatjecatelja":"Rudi","prezimeNatjecatelja":"Kovač","OIBNatjecatelja":"3215213512"},{"id":"57c2f060-ce67-491c-96a4-f2fd0e3d128e","imeNatjecatelja":"Tomislav","prezimeNatjecatelja":"Jurić","OIBNatjecatelja":"3215213512"}],"lIdClanovaTima":["a98804d9-72c2-46eb-94a9-ee67fe271483","95ab188f-e694-41c6-8ac3-b061f3b91fe4","57c2f060-ce67-491c-96a4-f2fd0e3d128e"],"lIdProgramskihJezikaTima":["bb737c87-faea-468c-b546-39d7e6ff911e","d6a2d60d-24a7-4677-984a-91385d038e4b","c0041c33-2e14-43d9-825b-e5ea4e26fb64"],"kontaktTima":{"brojMobitela":"123-456-7777","email":"d-tim@mail.com"},"institucija":"TVZ"},{"id":"d95bd623-879f-4ad0-bbde-8c0fc828d5f1","imeTima":"A-tim","kapetanTima":{"id":"be91f7ae-7fc5-44cf-a768-3313651d67e0","imeNatjecatelja":"Marko","prezimeNatjecatelja":"Horvat","OIBNatjecatelja":"3215213512"},"idKapetanaTima":"02736a9f-e3df-4350-864f-3694c4b5cd72","lClanoviTima":[{"id":"02736a9f-e3df-4350-864f-3694c4b5cd72","imeNatjecatelja":"Karlo","prezimeNatjecatelja":"Knežević","OIBNatjecatelja":"3215213512"},{"id":"b59e9210-02c8-4ce3-b7c2-9d7ba88afdb2","imeNatjecatelja":"Fran","prezimeNatjecatelja":"Petrović","OIBNatjecatelja":"3215213512"},{"id":"ef43ff9d-f162-4713-ac46-2593881086a5","imeNatjecatelja":"Iva","prezimeNatjecatelja":"Novak","OIBNatjecatelja":"3215213512"}],"lIdClanovaTima":["02736a9f-e3df-4350-864f-3694c4b5cd72","b59e9210-02c8-4ce3-b7c2-9d7ba88afdb2","ef43ff9d-f162-4713-ac46-2593881086a5"],"lIdProgramskihJezikaTima":["bb737c87-faea-468c-b546-39d7e6ff911e","d6a2d60d-24a7-4677-984a-91385d038e4b","c0041c33-2e14-43d9-825b-e5ea4e26fb64"],"kontaktTima":{"brojMobitela":"123-456-7777","email":"e-tim@mail.com"},"institucija":"VUV"}]
+[
+  {
+    "id": "c5183454-1c7e-4e98-b68a-4a097451133d",
+    "imeTima": "A-tim",
+    "kapetanTima": {
+      "id": "a83ac941-6971-4948-ba3c-2690c8d663e3",
+      "imeNatjecatelja": "Dominik",
+      "prezimeNatjecatelja": "Moslavac",
+      "OIBNatjecatelja": "3215213512"
+    },
+    "idKapetanaTima": "a83ac941-6971-4948-ba3c-2690c8d663e3",
+    "lClanoviTima": [
+      {
+        "id": "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+        "imeNatjecatelja": "Marko",
+        "prezimeNatjecatelja": "Horvat",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "a83ac941-6971-4948-ba3c-2690c8d663e3",
+        "imeNatjecatelja": "Dominik",
+        "prezimeNatjecatelja": "Moslavac",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "0acb9065-f819-42e3-8d02-fb7739d74b7d",
+        "imeNatjecatelja": "Petar",
+        "prezimeNatjecatelja": "Kovačević",
+        "OIBNatjecatelja": "3215213512"
+      }
+    ],
+    "lIdClanovaTima": [
+      "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+      "a83ac941-6971-4948-ba3c-2690c8d663e3",
+      "0acb9065-f819-42e3-8d02-fb7739d74b7d"
+    ],
+    "lIdProgramskihJezikaTima": [
+      "bb737c87-faea-468c-b546-39d7e6ff911e",
+      "d6a2d60d-24a7-4677-984a-91385d038e4b"
+    ],
+    "kontaktTima": {
+      "brojMobitela": "123-456-7777",
+      "email": "a-tim@mail.com"
+    },
+    "institucija": "VUV"
+  },
+  {
+    "id": "6eff2f54-b964-4671-a331-8201def7b687",
+    "imeTima": "Super-a-tim",
+    "kapetanTima": {
+      "id": "51b507a7-92a4-4177-aeca-207b7c82d9a9",
+      "imeNatjecatelja": "Ana",
+      "prezimeNatjecatelja": "Babić",
+      "OIBNatjecatelja": "3215213512"
+    },
+    "idKapetanaTima": "51b507a7-92a4-4177-aeca-207b7c82d9a9",
+    "lClanoviTima": [
+      {
+        "id": "51b507a7-92a4-4177-aeca-207b7c82d9a9",
+        "imeNatjecatelja": "Ana",
+        "prezimeNatjecatelja": "Babić",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "58da2b71-1dee-4eba-ba0b-11b7a087702f",
+        "imeNatjecatelja": "Mario",
+        "prezimeNatjecatelja": "Marić",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "b347d6a0-db22-4c63-a80a-244e30c434c3",
+        "imeNatjecatelja": "Luka",
+        "prezimeNatjecatelja": "Jurić",
+        "OIBNatjecatelja": "3215213512"
+      }
+    ],
+    "lIdClanovaTima": [
+      "51b507a7-92a4-4177-aeca-207b7c82d9a9",
+      "58da2b71-1dee-4eba-ba0b-11b7a087702f",
+      "b347d6a0-db22-4c63-a80a-244e30c434c3"
+    ],
+    "lIdProgramskihJezikaTima": [
+      "bb737c87-faea-468c-b546-39d7e6ff911e",
+      "09d11979-e0df-4a69-8eb7-e07f1fffe84a"
+    ],
+    "kontaktTima": {
+      "brojMobitela": "123-456-7777",
+      "email": "b-tim@mail.com"
+    },
+    "institucija": "FER"
+  },
+  {
+    "id": "30015c75-544c-4c32-9ab1-0120f5faa30d",
+    "imeTima": "A-tim",
+    "kapetanTima": {
+      "id": "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+      "imeNatjecatelja": "Marko",
+      "prezimeNatjecatelja": "Horvat",
+      "OIBNatjecatelja": "3215213512"
+    },
+    "idKapetanaTima": "be059b48-897f-4c7c-82c4-04bbdb5542bf",
+    "lClanoviTima": [
+      {
+        "id": "be059b48-897f-4c7c-82c4-04bbdb5542bf",
+        "imeNatjecatelja": "Barbara",
+        "prezimeNatjecatelja": "Marić",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "cf98b2f0-09c7-4120-b664-1e9965b4df9f",
+        "imeNatjecatelja": "Antonio",
+        "prezimeNatjecatelja": "Horvat",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "a8f53d1f-b733-4a62-90b3-7085cc2529bb",
+        "imeNatjecatelja": "Domagoj",
+        "prezimeNatjecatelja": "Babić",
+        "OIBNatjecatelja": "3215213512"
+      }
+    ],
+    "lIdClanovaTima": [
+      "be059b48-897f-4c7c-82c4-04bbdb5542bf",
+      "cf98b2f0-09c7-4120-b664-1e9965b4df9f",
+      "a8f53d1f-b733-4a62-90b3-7085cc2529bb"
+    ],
+    "lIdProgramskihJezikaTima": [
+      "bb737c87-faea-468c-b546-39d7e6ff911e",
+      "c3368baf-d4fe-425a-9a67-247eec9ea683",
+      "d6a2d60d-24a7-4677-984a-91385d038e4b",
+      "09d11979-e0df-4a69-8eb7-e07f1fffe84a"
+    ],
+    "kontaktTima": {
+      "brojMobitela": "123-456-7777",
+      "email": "c-tim@mail.com"
+    },
+    "institucija": "FOI"
+  },
+  {
+    "id": "4b97f872-9740-49f6-92cd-b00c04d2fd51",
+    "imeTima": "A-tim",
+    "kapetanTima": {
+      "id": "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+      "imeNatjecatelja": "Marko",
+      "prezimeNatjecatelja": "Horvat",
+      "OIBNatjecatelja": "3215213512"
+    },
+    "idKapetanaTima": "a98804d9-72c2-46eb-94a9-ee67fe271483",
+    "lClanoviTima": [
+      {
+        "id": "a98804d9-72c2-46eb-94a9-ee67fe271483",
+        "imeNatjecatelja": "Antonela",
+        "prezimeNatjecatelja": "Jurić",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "95ab188f-e694-41c6-8ac3-b061f3b91fe4",
+        "imeNatjecatelja": "Matko",
+        "prezimeNatjecatelja": "Maric",
+        "OIBNatjecatelja": "4854854855"
+      },
+      {
+        "id": "57c2f060-ce67-491c-96a4-f2fd0e3d128e",
+        "imeNatjecatelja": "Tomislav",
+        "prezimeNatjecatelja": "Jurić",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "1628a872-fa31-475b-b7ea-c8462d76f600",
+        "imeNatjecatelja": "Luka",
+        "prezimeNatjecatelja": "Matic",
+        "OIBNatjecatelja": "5555444111"
+      }
+    ],
+    "lIdClanovaTima": [
+      "a98804d9-72c2-46eb-94a9-ee67fe271483",
+      "95ab188f-e694-41c6-8ac3-b061f3b91fe4",
+      "57c2f060-ce67-491c-96a4-f2fd0e3d128e",
+      "1628a872-fa31-475b-b7ea-c8462d76f600"
+    ],
+    "lIdProgramskihJezikaTima": [
+      "bb737c87-faea-468c-b546-39d7e6ff911e",
+      "d6a2d60d-24a7-4677-984a-91385d038e4b",
+      "c0041c33-2e14-43d9-825b-e5ea4e26fb64"
+    ],
+    "kontaktTima": {
+      "brojMobitela": "123-456-7777",
+      "email": "d-tim@mail.com"
+    },
+    "institucija": "TVZ"
+  },
+  {
+    "id": "d95bd623-879f-4ad0-bbde-8c0fc828d5f1",
+    "imeTima": "A-tim",
+    "kapetanTima": {
+      "id": "be91f7ae-7fc5-44cf-a768-3313651d67e0",
+      "imeNatjecatelja": "Marko",
+      "prezimeNatjecatelja": "Horvat",
+      "OIBNatjecatelja": "3215213512"
+    },
+    "idKapetanaTima": "02736a9f-e3df-4350-864f-3694c4b5cd72",
+    "lClanoviTima": [
+      {
+        "id": "02736a9f-e3df-4350-864f-3694c4b5cd72",
+        "imeNatjecatelja": "Karlo",
+        "prezimeNatjecatelja": "Knežević",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "b59e9210-02c8-4ce3-b7c2-9d7ba88afdb2",
+        "imeNatjecatelja": "Fran",
+        "prezimeNatjecatelja": "Petrović",
+        "OIBNatjecatelja": "3215213512"
+      },
+      {
+        "id": "ef43ff9d-f162-4713-ac46-2593881086a5",
+        "imeNatjecatelja": "Iva",
+        "prezimeNatjecatelja": "Novak",
+        "OIBNatjecatelja": "3215213512"
+      }
+    ],
+    "lIdClanovaTima": [
+      "02736a9f-e3df-4350-864f-3694c4b5cd72",
+      "b59e9210-02c8-4ce3-b7c2-9d7ba88afdb2",
+      "ef43ff9d-f162-4713-ac46-2593881086a5"
+    ],
+    "lIdProgramskihJezikaTima": [
+      "bb737c87-faea-468c-b546-39d7e6ff911e",
+      "d6a2d60d-24a7-4677-984a-91385d038e4b",
+      "c0041c33-2e14-43d9-825b-e5ea4e26fb64"
+    ],
+    "kontaktTima": {
+      "brojMobitela": "123-456-7777",
+      "email": "e-tim@mail.com"
+    },
+    "institucija": "VUV"
+  },
+  {
+    "id": "d911d81d-0a22-42f5-abab-02cb9c4d9ce8",
+    "imeTima": "Btim",
+    "kapetanTima": {
+      "id": "ae315bd5-1319-49c4-bc3a-16f24e7b8da1",
+      "imeNatjecatelja": "Luka",
+      "prezimeNatjecatelja": "Maric",
+      "OIBNatjecatelja": "1234567890"
+    },
+    "idKapetanaTima": "ae315bd5-1319-49c4-bc3a-16f24e7b8da1",
+    "lClanoviTima": [
+      {
+        "id": "ae315bd5-1319-49c4-bc3a-16f24e7b8da1",
+        "imeNatjecatelja": "Luka",
+        "prezimeNatjecatelja": "Maric",
+        "OIBNatjecatelja": "1234567890"
+      },
+      {
+        "id": "2b19853e-629b-4fb4-b5db-2d0ecabec915",
+        "imeNatjecatelja": "Toni",
+        "prezimeNatjecatelja": "Tonik",
+        "OIBNatjecatelja": "0988111333"
+      },
+      {
+        "id": "9eef80cb-0e30-4d65-b313-5f877375e325",
+        "imeNatjecatelja": "Marko",
+        "prezimeNatjecatelja": "Markan",
+        "OIBNatjecatelja": "9998888222"
+      }
+    ],
+    "lIdClanovaTima": [
+      "ae315bd5-1319-49c4-bc3a-16f24e7b8da1",
+      "2b19853e-629b-4fb4-b5db-2d0ecabec915",
+      "9eef80cb-0e30-4d65-b313-5f877375e325"
+    ],
+    "lIdProgramskihJezikaTima": [
+      "bb737c87-faea-468c-b546-39d7e6ff911e",
+      "d6a2d60d-24a7-4677-984a-91385d038e4b",
+      "c0041c33-2e14-43d9-825b-e5ea4e26fb64"
+    ],
+    "kontaktTima": {
+      "brojMobitela": "0995062122",
+      "email": "btim@gmail.com"
+    },
+    "institucija": "VUV"
+  }
+]
